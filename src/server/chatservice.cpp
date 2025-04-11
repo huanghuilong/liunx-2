@@ -2,6 +2,7 @@
 #include "public.hpp"
 #include <muduo/base/Logging.h>
 #include <vector>
+#include <iostream>
 using namespace std;
 using namespace muduo;
 
@@ -123,6 +124,22 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
                 response["friends"] = vec2;
             }
 
+            //查询所有用户的信息并返回
+            vector<User> alluserVec = _userModel.AllUserInfo();
+            if (!alluserVec.empty())
+            {
+                vector<string> vec2;
+                for (User &user : alluserVec)
+                {
+                    json js;
+                    js["id"] = user.getId();
+                    js["name"] = user.getName();
+                    js["state"] = user.getState();
+                    vec2.push_back(js.dump());
+                }
+                response["alluser"] = vec2;
+            }
+
             // 查询用户的群组信息
             vector<Group> groupuserVec = _groupModel.queryGroups(id);
             if (!groupuserVec.empty())
@@ -151,7 +168,6 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
 
                 response["groups"] = groupV;
             }
-
             conn->send(response.dump());
         }
     }
@@ -249,6 +265,7 @@ void ChatService::clientCloseException(const TcpConnectionPtr &conn)
 // 一对一聊天业务
 void ChatService::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    std::cout << "我可以进入聊天的业务并且开始分配任务：" << std::endl;
     int toid = js["toid"].get<int>();
 
     {
@@ -279,7 +296,6 @@ void ChatService::addFriend(const TcpConnectionPtr &conn, json &js, Timestamp ti
 {
     int userid = js["id"].get<int>();
     int friendid = js["friendid"].get<int>();
-
     // 存储好友信息
     _friendModel.insert(userid, friendid);
 }

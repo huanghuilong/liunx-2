@@ -1,0 +1,100 @@
+MainWindow into json : 
+{
+    "errno":0,
+    "groups":["{\"groupdesc\":\"start develop a chat project\",
+                \"groupname\":\"C++ chat project\",\"id\":1,
+                \"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zhang san\\\",\\\"role\\\":\\\"creator\\\",\\\"state\\\":\\\"offline\\\"}\",
+                \"{\\\"id\\\":19,\\\"name\\\":\\\"pi pi\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"online\\\"}\",
+                \"{\\\"id\\\":21,\\\"name\\\":\\\"gao yang\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\"]}"
+            ],
+    "id":19,
+    "msgid":2,
+    "name":"pi pi"
+}
+
+
+
+
+
+MainWindow into json : 
+{
+    "errno":0,
+    "friends":["{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}"],
+    "groups":["{\"groupdesc\":\"start develop a chat project\",\"groupname\":\"C++ chat project\",\"id\":1,\"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zhang san\\\",\\\"role\\\":\\\"creator\\\",\\\"state\\\":\\\"online\\\"}\",\"{\\\"id\\\":19,\\\"name\\\":\\\"pi pi\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\",\"{\\\"id\\\":21,\\\"name\\\":\\\"gao yang\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\"]}"],
+    "id":13,
+    "msgid":2,
+    "name":"zhang san"
+}
+
+
+
+
+
+terminate called after throwing an instance of 'nlohmann::detail::parse_error'
+  what():  [json.exception.parse_error.101] parse error at line 1, column 1025: syntax error while parsing value - invalid string: missing closing quote; last read: '"{\"groupdesc\":\"start develop a chat project\",\"groupname\":\"C++ chat project\",\"id\":1,\"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zha'
+已中止 (核心已转储)
+
+
+
+
+
+response: 
+{
+    "alluser":["{\"id\":13,\"name\":\"zhang san\",\"state\":\"online\"}","{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":16,\"name\":\"liu shuo\",\"state\":\"offline\"}","{\"id\":18,\"name\":\"wu yang\",\"state\":\"offline\"}","{\"id\":19,\"name\":\"pi pi\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":23,\"name\":\"nikonikoni\",\"state\":\"offline\"}","{\"id\":24,\"name\":\"nikonikoni2\",\"state\":\"offline\"}","{\"id\":25,\"name\":\"nikonioko\",\"state\":\"offline\"}"],
+    "errno":0,
+    "friends":["{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}"],
+    "groups":["{\"groupdesc\":\"start develop a chat project\",\"groupname\":\"C++ chat project\",\"id\":1,\"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zhang san\\\",\\\"role\\\":\\\"creator\\\",\\\"state\\\":\\\"online\\\"}\",\"{\\\"id\\\":19,\\\"name\\\":\\\"pi pi\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\",\"{\\\"id\\\":21,\\\"name\\\":\\\"gao yang\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\"]}"],
+    "id":13,
+    "msgid":2,
+    "name":"zhang san"
+}
+
+
+
+
+
+response: 
+{
+    "alluser":["{\"id\":13,\"name\":\"zhang san\",\"state\":\"offline\"}","{\"id\":15,\"name\":\"li si\",\"state\":\"online\"}","{\"id\":16,\"name\":\"liu shuo\",\"state\":\"offline\"}","{\"id\":18,\"name\":\"wu yang\",\"state\":\"offline\"}","{\"id\":19,\"name\":\"pi pi\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":23,\"name\":\"nikonikoni\",\"state\":\"offline\"}","{\"id\":24,\"name\":\"nikonikoni2\",\"state\":\"offline\"}","{\"id\":25,\"name\":\"nikonioko\",\"state\":\"offline\"}"],
+    "errno":0,
+    "id":15,
+    "msgid":2,
+    "name":"li si"
+}
+
+
+我我我我response: {
+    "alluser":["{\"id\":13,\"name\":\"zhang san\",\"state\":\"online\"}","{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":16,\"name\":\"liu shuo\",\"state\":\"offline\"}","{\"id\":18,\"name\":\"wu yang\",\"state\":\"offline\"}","{\"id\":19,\"name\":\"pi pi\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":23,\"name\":\"nikonikoni\",\"state\":\"offline\"}","{\"id\":24,\"name\":\"nikonikoni2\",\"state\":\"offline\"}","{\"id\":25,\"name\":\"nikonioko\",\"state\":\"offline\"}"],
+    "errno":0,
+    "friends":["{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}"],
+    "groups":["{\"groupdesc\":\"start develop a chat project\",\"groupname\":\"C++ chat project\",\"id\":1,\"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zhang san\\\",\\\"role\\\":\\\"creator\\\",\\\"state\\\":\\\"online\\\"}\",\"{\\\"id\\\":19,\\\"name\\\":\\\"pi pi\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\",\"{\\\"id\\\":21,\\\"name\\\":\\\"gao yang\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\"]}"],
+    "id":13,
+    "msgid":2,
+    "name":"zhang san"
+}
+
+
+服务端
+我我我我response: {"alluser":["{\"id\":13,\"name\":\"zhang san\",\"state\":\"online\"}","{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":16,\"name\":\"liu shuo\",\"state\":\"offline\"}","{\"id\":18,\"name\":\"wu yang\",\"state\":\"offline\"}","{\"id\":19,\"name\":\"pi pi\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":23,\"name\":\"nikonikoni\",\"state\":\"offline\"}","{\"id\":24,\"name\":\"nikonikoni2\",\"state\":\"offline\"}","{\"id\":25,\"name\":\"nikonioko\",\"state\":\"offline\"}"],"errno":0,"friends":["{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}"],"groups":["{\"groupdesc\":\"start develop a chat project\",\"groupname\":\"C++ chat project\",\"id\":1,\"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zhang san\\\",\\\"role\\\":\\\"creator\\\",\\\"state\\\":\\\"online\\\"}\",\"{\\\"id\\\":19,\\\"name\\\":\\\"pi pi\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\",\"{\\\"id\\\":21,\\\"name\\\":\\\"gao yang\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\"]}"],"id":13,"msgid":2,"name":"zhang san"}
+
+
+客户端
+the buffer is :{"alluser":["{\"id\":13,\"name\":\"zhang san\",\"state\":\"online\"}","{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":16,\"name\":\"liu shuo\",\"state\":\"offline\"}","{\"id\":18,\"name\":\"wu yang\",\"state\":\"offline\"}","{\"id\":19,\"name\":\"pi pi\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":23,\"name\":\"nikonikoni\",\"state\":\"offline\"}","{\"id\":24,\"name\":\"nikonikoni2\",\"state\":\"offline\"}","{\"id\":25,\"name\":\"nikonioko\",\"state\":\"offline\"}"],"errno":0,"friends":["{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}"],"groups":["{\"groupdesc\":\"start develop a chat project\",\"groupname\":\"C++ chat project\",\"id\":1,\"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zha
+
+
+
+
+
+
+
+
+in readTaskHandler: {
+    "alluser":["{\"id\":13,\"name\":\"zhang san\",\"state\":\"online\"}","{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":16,\"name\":\"liu shuo\",\"state\":\"offline\"}","{\"id\":18,\"name\":\"wu yang\",\"state\":\"offline\"}","{\"id\":19,\"name\":\"pi pi\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":23,\"name\":\"nikonikoni\",\"state\":\"offline\"}","{\"id\":24,\"name\":\"nikonikoni2\",\"state\":\"offline\"}","{\"id\":25,\"name\":\"nikonioko\",\"state\":\"offline\"}"],
+    "errno":0,
+    "friends":["{\"id\":15,\"name\":\"li si\",\"state\":\"offline\"}","{\"id\":21,\"name\":\"gao yang\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}","{\"id\":22,\"name\":\"1\",\"state\":\"offline\"}"],
+    "groups":["{\"groupdesc\":\"start develop a chat project\",\"groupname\":\"C++ chat project\",\"id\":1,\"users\":[\"{\\\"id\\\":13,\\\"name\\\":\\\"zhang san\\\",\\\"role\\\":\\\"creator\\\",\\\"state\\\":\\\"online\\\"}\",\"{\\\"id\\\":19,\\\"name\\\":\\\"pi pi\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\",\"{\\\"id\\\":21,\\\"name\\\":\\\"gao yang\\\",\\\"role\\\":\\\"normal\\\",\\\"state\\\":\\\"offline\\\"}\"]}"],
+    "id":13,
+    "msgid":2,
+    "name":"zhang san"
+}
+

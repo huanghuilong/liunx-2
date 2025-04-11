@@ -2,6 +2,7 @@
 #define USER_H
 
 #include <string>
+#include <vector>
 using namespace std;
 
 // User表的ORM类
@@ -21,11 +22,15 @@ public:
     void setPwd(string pwd) { this->password = pwd; }
     void setState(string state) { this->state = state; }
 
-    int getId() { return this->id; }
-    string getName() { return this->name; }
-    string getPwd() { return this->password; }
-    string getState() { return this->state; }
+    int getId() const{ return this->id; }
+    string getName() const{ return this->name; }
+    string getPwd() const{ return this->password; }
+    string getState() const{ return this->state; }
 
+    // 在 User 类定义中添加
+    bool operator==(const User& other) const {
+        return this->id == other.id;  // 或其他唯一标识比较
+    }
 protected:
     int id;
     string name;

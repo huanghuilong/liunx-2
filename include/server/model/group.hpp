@@ -21,9 +21,9 @@ public:
     void setName(string name) { this->name = name; }
     void setDesc(string desc) { this->desc = desc; }
 
-    int getId() { return this->id; }
-    string getName() { return this->name; }
-    string getDesc() { return this->desc; }
+    int getId() const{ return this->id; }
+    string getName() const{ return this->name; }
+    string getDesc() const{ return this->desc; }
     vector<GroupUser> &getUsers() { return this->users; }
 
 private:

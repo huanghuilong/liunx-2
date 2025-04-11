@@ -6,6 +6,11 @@
 # 设置需要编译的源文件列表
 set(SRC_LIST ./muduo_server.cpp)
 
+#添加路径
+include_directories(/home/nikonikoni/桌面/chatserver/thirdparty/muduo/include)
+link_directories(/home/nikonikoni/桌面/chatserver/thirdparty/muduo/lib)
+
+
 # 设置可执行文件最终存储的路径
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
