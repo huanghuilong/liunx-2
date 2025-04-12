@@ -71,3 +71,12 @@ MYSQL* MySQL::getConnection()
 {
     return _conn;
 }
+
+void MySQL::refreshAliveTime()
+{
+    _alivetime = clock();
+}
+
+clock_t MySQL::getAliveTime()const{
+    return clock() - _alivetime;
+}

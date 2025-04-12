@@ -247,6 +247,30 @@ db/db.cpp.s:
 	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/db.cpp.s
 .PHONY : db/db.cpp.s
 
+db/dbConnectionpool.o: db/dbConnectionpool.cpp.o
+.PHONY : db/dbConnectionpool.o
+
+# target to build an object file
+db/dbConnectionpool.cpp.o:
+	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/dbConnectionpool.cpp.o
+.PHONY : db/dbConnectionpool.cpp.o
+
+db/dbConnectionpool.i: db/dbConnectionpool.cpp.i
+.PHONY : db/dbConnectionpool.i
+
+# target to preprocess a source file
+db/dbConnectionpool.cpp.i:
+	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/dbConnectionpool.cpp.i
+.PHONY : db/dbConnectionpool.cpp.i
+
+db/dbConnectionpool.s: db/dbConnectionpool.cpp.s
+.PHONY : db/dbConnectionpool.s
+
+# target to generate assembly for a file
+db/dbConnectionpool.cpp.s:
+	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/db/dbConnectionpool.cpp.s
+.PHONY : db/dbConnectionpool.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -413,6 +437,9 @@ help:
 	@echo "... db/db.o"
 	@echo "... db/db.i"
 	@echo "... db/db.s"
+	@echo "... db/dbConnectionpool.o"
+	@echo "... db/dbConnectionpool.i"
+	@echo "... db/dbConnectionpool.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

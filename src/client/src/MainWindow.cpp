@@ -438,8 +438,9 @@ void MainWindow::displayChatHistory(int id, bool isGroup) {
             "</div>"
         ).arg(time).arg(msg);
         
-        chatDisplay->append(msgHtml);
+        // chatDisplay->append(msgHtml);
     }
+    std::cout << "聊天的id：" << id << " 是不是群组： " << isGroup << std::endl;
     
     chatDisplay->verticalScrollBar()->setValue(chatDisplay->verticalScrollBar()->maximum());
 }

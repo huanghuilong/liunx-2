@@ -3,6 +3,8 @@
 
 #include <mysql/mysql.h>
 #include <string>
+#include <atomic>
+#include <thread>
 using namespace std;
 
 // 数据库操作类
@@ -21,8 +23,15 @@ public:
     MYSQL_RES *query(string sql);
     // 获取连接
     MYSQL* getConnection();
+
+    // 刷新一下连接的起始的空闲时间点 
+    void refreshAliveTime();
+
+    // 返回存活的时间
+    clock_t getAliveTime()const;
 private:
     MYSQL *_conn;
+    clock_t _alivetime; // 记录进入空闲状态以后的存活时间（为数据库连接池设计的）
 };
 
 #endif
