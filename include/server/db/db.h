@@ -5,6 +5,8 @@
 #include <string>
 #include <atomic>
 #include <thread>
+#include <memory>
+#include "dbConnectionpool.h"
 using namespace std;
 
 // 数据库操作类

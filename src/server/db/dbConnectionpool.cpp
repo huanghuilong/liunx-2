@@ -1,4 +1,5 @@
 #include "dbConnectionpool.h"
+#include <iostream>
 #include <muduo/base/Logging.h>
 
 // 连接池的构造
@@ -42,8 +43,10 @@ bool ConnectionPool::loadConfigFile(){
         char line[1024] = {0};
         fgets(line, 1024, pf);
         std::string str = line;
-        int idx = str.find(':', 0);
 
+        // std::cout << str << std::endl;
+        int idx = str.find('=', 0);
+        // std::cout << "idx = "  << idx << std::endl;
         if (idx == -1){  //无效的配置项
             continue;
         }
@@ -52,6 +55,7 @@ bool ConnectionPool::loadConfigFile(){
         std::string key = str.substr(0, idx);
         std::string value = str.substr(idx + 1, endidx - idx - 1);
 
+        std::cout << "配置文件的内容：" << key << " " << value << std::endl;
         if (key == "ip") { _ip = value; }
         else if (key == "port") { _port = atoi(value.c_str()); }
         else if (key == "username") { _username = value; }
@@ -68,17 +72,21 @@ bool ConnectionPool::loadConfigFile(){
     // 运行在独立的线程中，专门负责生产新的连接
 void ConnectionPool::produceConnectionTask()
 {
+    std::cout << "i can into and produceConnectionTask" << std::endl;
     for(;;){
         unique_lock<mutex> lock(_queueMutex);
         while (!_connectionQue.empty()){// 当连接池的队列不为空的时候
+            std::cout << "我还在等待中 " << std::endl;
             cv.wait(lock);              // 队列不为空的时候，这个线程就为等待状态
         }
         if (_connectionCnt < _maxSize){// 如果线程池的数量小于最大的连接数量的时候,继续创建新的连接
+            std::cout << "我要创建一个全新的世界" << std::endl;
             MySQL *p = new MySQL();
             p->connect();
             p->refreshAliveTime();
             _connectionQue.push(p);
             _connectionCnt++;
+            std::cout << "i can make and the _connectionCnt = " << _connectionCnt << std::endl;
         }
         // 通知消费者线程可以消费连接了
         cv.notify_all();
@@ -111,6 +119,7 @@ std::shared_ptr<MySQL> ConnectionPool::getConnection(){
 
     unique_lock<mutex> lock(_queueMutex);
     while(_connectionQue.empty()){
+        // std::cout << "等待的时间是：" << _connectionTimeout << std::endl;
         if(cv_status::timeout == cv.wait_for(lock, chrono::milliseconds(_connectionTimeout))){
             if(_connectionQue.empty()){//获取空闲连接超时了
             LOG_INFO << "获取空闲连接超时了.....获取连接失败 ";

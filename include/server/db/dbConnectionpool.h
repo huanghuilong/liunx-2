@@ -8,6 +8,7 @@
 #include <functional>
 #include <condition_variable>
 
+class MySQL;
 class ConnectionPool
 {
 public:
@@ -37,6 +38,6 @@ private:
 
     std::queue<MySQL*> _connectionQue;  //存储MySQL连接的队列
     std::mutex _queueMutex;                  // 维护连接队列的线程安全互斥锁
-    atomic_int _connectionCnt;
-    condition_variable cv; // 设置条件变量，用于连接生产线程和消费线程之间的通信
+    std::atomic_int _connectionCnt;
+    std::condition_variable cv; // 设置条件变量，用于连接生产线程和消费线程之间的通信
 };
