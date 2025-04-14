@@ -202,9 +202,24 @@ void readTaskHandler(int clientfd)
         {
             cout << js["time"].get<string>() << " [" << js["id"] << "]" << js["name"].get<string>()
                  << " said: " << js["msg"].get<string>() << endl;
-            // -------------------------------存储到一个数组中-----------------------
-
-            // ---------------------------------------------------------------------
+            
+            // 发送消息到主窗口
+            QMetaObject::invokeMethod(QApplication::instance(), [=](){
+                // 获取所有顶层窗口
+                QWidgetList topLevelWidgets = QApplication::topLevelWidgets();
+                for (QWidget *widget : topLevelWidgets) {
+                    MainWindow *mainwindow = qobject_cast<MainWindow*>(widget);
+                    if (mainwindow) {
+                        mainwindow->onReceiveMessage(
+                            QString::fromStdString(js["name"].get<string>()),
+                            QString::fromStdString(js["msg"].get<string>()),
+                            QString::fromStdString(js["time"].get<string>()),
+                            false
+                        );
+                        break;
+                    }
+                }
+            }, Qt::QueuedConnection);
             continue;
         }
 
@@ -212,6 +227,24 @@ void readTaskHandler(int clientfd)
         {
             cout << "群消息[" << js["groupid"] << "]:" << js["time"].get<string>() << " [" << js["id"] << "]" << js["name"].get<string>()
                  << " said: " << js["msg"].get<string>() << endl;
+            
+            // 发送群消息到主窗口
+            QMetaObject::invokeMethod(QApplication::instance(), [=](){
+                // 获取所有顶层窗口
+                QWidgetList topLevelWidgets = QApplication::topLevelWidgets();
+                for (QWidget *widget : topLevelWidgets) {
+                    MainWindow *mainwindow = qobject_cast<MainWindow*>(widget);
+                    if (mainwindow) {
+                        mainwindow->onReceiveMessage(
+                            QString::fromStdString(js["name"].get<string>()),
+                            QString::fromStdString(js["msg"].get<string>()),
+                            QString::fromStdString(js["time"].get<string>()),
+                            false
+                        );
+                        break;
+                    }
+                }
+            }, Qt::QueuedConnection);
             continue;
         }
 

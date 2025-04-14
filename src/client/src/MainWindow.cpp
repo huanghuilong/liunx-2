@@ -270,7 +270,13 @@ void MainWindow::onFriendItemClicked(QListWidgetItem *item) {
     
     currentChatLabel->setText(friendName);
     clearChatArea();
-    displayChatHistory(friendId, false);
+    
+    // 显示与当前好友的聊天历史
+    if (chatHistory.find(friendId) != chatHistory.end()) {
+        for (const ChatMessage &msg : chatHistory[friendId]) {
+            displayMessage(msg);
+        }
+    }
 }
 
 void MainWindow::onGroupItemClicked(QListWidgetItem *item) {
@@ -288,7 +294,66 @@ void MainWindow::onGroupItemClicked(QListWidgetItem *item) {
     
     currentChatLabel->setText(groupName);
     clearChatArea();
-    displayChatHistory(groupId, true);
+    
+    // 显示与当前群组的聊天历史
+    if (chatHistory.find(groupId) != chatHistory.end()) {
+        for (const ChatMessage &msg : chatHistory[groupId]) {
+            displayMessage(msg);
+        }
+    }
+}
+
+void MainWindow::displayMessage(const ChatMessage &msg) {
+    QString msgHtml = QString(
+        "<div style='margin-bottom: 12px; text-align: %1;'>"
+        "<div style='font-size: 12px; color: #868e96; margin-bottom: 4px;'>%2</div>"
+        "<div style='background: %3; color: %4; display: inline-block; "
+        "padding: 8px 12px; border-radius: 12px; max-width: 70%%; word-wrap: break-word;'>"
+        "%5</div>"
+        "</div>"
+    ).arg(
+        msg.isSelf ? "right" : "left",
+        msg.time,
+        msg.isSelf ? "#4263eb" : "#f1f3f5",
+        msg.isSelf ? "white" : "#212529",
+        msg.message
+    );
+    
+    chatDisplay->append(msgHtml);
+    chatDisplay->verticalScrollBar()->setValue(chatDisplay->verticalScrollBar()->maximum());
+}
+
+void MainWindow::onReceiveMessage(const QString &senderName, const QString &message, const QString &time, bool isSelf) {
+    // 创建消息对象
+    ChatMessage msg;
+    msg.senderName = senderName;
+    msg.message = message;
+    msg.time = time;
+    msg.isSelf = isSelf;
+
+    // 获取发送者ID
+    int senderId = -1;
+    if (isSelf) {
+        senderId = currentChatId;
+    } else {
+        // 从好友列表中查找发送者ID
+        for (const User &user : friends) {
+            if (QString::fromStdString(user.getName()) == senderName) {
+                senderId = user.getId();
+                break;
+            }
+        }
+    }
+
+    // 如果找到了发送者ID，保存消息
+    if (senderId != -1) {
+        chatHistory[senderId].push_back(msg);
+        
+        // 如果当前正在与发送者聊天，则显示消息
+        if (currentChatId == senderId) {
+            displayMessage(msg);
+        }
+    }
 }
 
 void MainWindow::onSendButtonClicked() {
@@ -298,16 +363,8 @@ void MainWindow::onSendButtonClicked() {
     QString time = QDateTime::currentDateTime().toString("HH:mm");
     QString senderName = QString::fromStdString(currentUser.getName());
 
-    QString msgHtml = QString(
-        "<div style='margin-bottom: 12px; text-align: right;'>"
-        "<div style='font-size: 12px; color: #868e96; margin-bottom: 4px;'>%1</div>"
-        "<div style='background: #4263eb; color: white; display: inline-block; "
-        "padding: 8px 12px; border-radius: 12px; max-width: 70%%; word-wrap: break-word;'>"
-        "%2</div>"
-        "</div>"
-    ).arg(time).arg(message);
-    
-    chatDisplay->append(msgHtml);
+    // 显示自己发送的消息
+    onReceiveMessage(senderName, message, time, true);
     messageInput->clear();
 
     // --------------------------chat业务的实现---------------------------------
@@ -329,25 +386,6 @@ void MainWindow::onSendButtonClicked() {
         cerr << "send chat msg error -> " << buffer << endl;
     }
     // ------------------------------------------------------------------------
-    // QTimer::singleShot(1000, [this]() {
-    //     if (currentChatId != -1) {
-    //         QString replyText = isGroupChat ? 
-    //             QString("这是群聊%1的自动回复").arg(currentChatId) :
-    //             QString("这是来自好友%1的自动回复").arg(currentChatId);
-            
-    //         QString time = QDateTime::currentDateTime().toString("HH:mm");
-    //         QString msgHtml = QString(
-    //             "<div style='margin-bottom: 12px; text-align: left;'>"
-    //             "<div style='font-size: 12px; color: #868e96; margin-bottom: 4px;'>%1</div>"
-    //             "<div style='background: #f1f3f5; color: #212529; display: inline-block; "
-    //             "padding: 8px 12px; border-radius: 12px; max-width: 70%%; word-wrap: break-word;'>"
-    //             "%2</div>"
-    //             "</div>"
-    //         ).arg(time).arg(replyText);
-            
-    //         chatDisplay->append(msgHtml);
-    //     }
-    // });
 }
 
 void MainWindow::onSearchTextChanged(const QString &text) {
@@ -417,32 +455,6 @@ void MainWindow::onAddFriendClicked(const User &user, const QString &message) {
 
 void MainWindow::clearChatArea() {
     chatDisplay->clear();
-}
-
-void MainWindow::displayChatHistory(int id, bool isGroup) {
-    QStringList exampleMessages = {
-        "你好！最近怎么样？",
-        "项目进展如何？",
-        "我们明天上午10点开会讨论一下",
-        "记得把文档准备好"
-    };
-    
-    foreach (const QString &msg, exampleMessages) {
-        QString time = QDateTime::currentDateTime().toString("HH:mm");
-        QString msgHtml = QString(
-            "<div style='margin-bottom: 12px; text-align: left;'>"
-            "<div style='font-size: 12px; color: #868e96; margin-bottom: 4px;'>%1</div>"
-            "<div style='background: #f1f3f5; color: #212529; display: inline-block; "
-            "padding: 8px 12px; border-radius: 12px; max-width: 70%%; word-wrap: break-word;'>"
-            "%2</div>"
-            "</div>"
-        ).arg(time).arg(msg);
-        
-        // chatDisplay->append(msgHtml);
-    }
-    std::cout << "聊天的id：" << id << " 是不是群组： " << isGroup << std::endl;
-    
-    chatDisplay->verticalScrollBar()->setValue(chatDisplay->verticalScrollBar()->maximum());
 }
 
 #include "MainWindow.moc"

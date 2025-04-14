@@ -1,6 +1,27 @@
 #pragma once
 #include "public.h"
 #include "AddFriendDialog.h"
+#include <QMainWindow>
+#include <QListWidget>
+#include <QSplitter>
+#include <QHBoxLayout>
+#include <QTextEdit>
+#include <QScrollBar>
+#include <QDateTime>
+#include <QFont>
+#include <QTimer>
+#include <QApplication>
+#include <QWidgetList>
+#include <map>
+#include <vector>
+
+// 聊天消息结构
+struct ChatMessage {
+    QString senderName;
+    QString message;
+    QString time;
+    bool isSelf;
+};
 
 // 主窗口类，继承自QMainWindow  用来显示聊天窗口
 class MainWindow : public QMainWindow {
@@ -14,6 +35,9 @@ public:
                       const std::vector<User> &friends,
                       const std::vector<Group> &groups,
                       const std::vector<User> &AllUser);// 初始化更新用户数据
+
+    // 接收消息的槽函数
+    void onReceiveMessage(const QString &senderName, const QString &message, const QString &time, bool isSelf = false);
 
 private slots:
     // 槽函数 - 点击好友项
@@ -29,7 +53,6 @@ private slots:
     void onAddFriendClicked(const User &user, const QString &message);
     void onSearchResultClicked(QListWidgetItem *item);
 
-
 private:
     // 初始化UI界面
     void setupUI();
@@ -42,6 +65,8 @@ private:
     //用来添加左边的用户框和群组聊天框
     void createFriendItem(QListWidget *list, const User &user, bool isFriend);
     void createGroupItem(QListWidget *list, const Group &group, bool isFriend);
+    // 显示消息
+    void displayMessage(const ChatMessage &msg);
 
     // UI组件
     QSplitter *mainSplitter;    // 主分割器，用于分割左右面板
@@ -70,4 +95,7 @@ private:
     
     int currentChatId = -1;     // 当前聊天ID(好友ID或群组ID)
     bool isGroupChat = false;   // 是否是群聊
+
+    // 聊天历史记录
+    std::map<int, std::vector<ChatMessage>> chatHistory;  // 存储所有聊天记录
 };

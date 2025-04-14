@@ -441,4 +441,6 @@ src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
  /home/nikonikoni/桌面/chatserver/src/client/include/registerwindow.h \
  /home/nikonikoni/桌面/chatserver/src/client/include/MainWindow.h \
- /home/nikonikoni/桌面/chatserver/src/client/include/AddFriendDialog.h
+ /home/nikonikoni/桌面/chatserver/src/client/include/AddFriendDialog.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QWidgetList \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h

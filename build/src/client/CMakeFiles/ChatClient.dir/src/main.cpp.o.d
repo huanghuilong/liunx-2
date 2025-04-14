@@ -442,4 +442,6 @@ src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o: \
  /home/nikonikoni/桌面/chatserver/src/client/include/registerwindow.h \
  /home/nikonikoni/桌面/chatserver/src/client/include/MainWindow.h \
  /home/nikonikoni/桌面/chatserver/src/client/include/AddFriendDialog.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QWidgetList \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
  /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/include/main.moc

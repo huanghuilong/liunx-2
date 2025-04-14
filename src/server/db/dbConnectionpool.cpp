@@ -76,11 +76,9 @@ void ConnectionPool::produceConnectionTask()
     for(;;){
         unique_lock<mutex> lock(_queueMutex);
         while (!_connectionQue.empty()){// 当连接池的队列不为空的时候
-            std::cout << "我还在等待中 " << std::endl;
             cv.wait(lock);              // 队列不为空的时候，这个线程就为等待状态
         }
         if (_connectionCnt < _maxSize){// 如果线程池的数量小于最大的连接数量的时候,继续创建新的连接
-            std::cout << "我要创建一个全新的世界" << std::endl;
             MySQL *p = new MySQL();
             p->connect();
             p->refreshAliveTime();
