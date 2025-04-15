@@ -59,6 +59,7 @@ int main(int argc, char **argv)
 // 处理注册的响应逻辑
 void doRegResponse(json &responsejs)
 {
+    std::cout << "i can into here , here is doRegResponse!" << std::endl;
     if (0 != responsejs["errno"].get<int>()) // 注册失败
     {
         cerr << "name is already exist, register error!" << endl;
@@ -67,6 +68,7 @@ void doRegResponse(json &responsejs)
     {
         cout << "name register success, userid is " << responsejs["id"]
                 << ", do not forget it!" << endl;
+        userReg = responsejs["id"].get<int>();
     }
 }
 
@@ -264,34 +266,6 @@ void readTaskHandler(int clientfd)
     }
 }
 
-// // 显示当前登录成功用户的基本信息
-// void showCurrentUserData()
-// {
-//     cout << "======================login user======================" << endl;
-//     cout << "current login user => id:" << g_currentUser.getId() << " name:" << g_currentUser.getName() << endl;
-//     cout << "----------------------friend list---------------------" << endl;
-//     if (!g_currentUserFriendList.empty())
-//     {
-//         for (User &user : g_currentUserFriendList)
-//         {
-//             cout << user.getId() << " " << user.getName() << " " << user.getState() << endl;
-//         }
-//     }
-//     cout << "----------------------group list----------------------" << endl;
-//     if (!g_currentUserGroupList.empty())
-//     {
-//         for (Group &group : g_currentUserGroupList)
-//         {
-//             cout << group.getId() << " " << group.getName() << " " << group.getDesc() << endl;
-//             for (GroupUser &user : group.getUsers())
-//             {
-//                 cout << user.getId() << " " << user.getName() << " " << user.getState()
-//                      << " " << user.getRole() << endl;
-//             }
-//         }
-//     }
-//     cout << "======================================================" << endl;
-// }
 
 // "help" command handler
 void help(int fd = 0, string str = "");

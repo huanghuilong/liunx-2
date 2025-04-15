@@ -98,3 +98,14 @@ in readTaskHandler: {
     "name":"zhang san"
 }
 
+
+
+
+(gdb) run
+Starting program: /home/nikonikoni/桌面/chatserver/bin/ChatClient 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+command invalid! example: ./ChatClient 127.0.0.1 6000
+[Inferior 1 (process 97179) exited with code 0377]
+(gdb) 
+

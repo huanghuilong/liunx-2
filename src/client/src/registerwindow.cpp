@@ -128,8 +128,8 @@ void RegisterWindow::handleRegister() {
     qDebug() << "注册信息 - 用户名:" << username 
             //  << "账号:" << account 
                 << "密码:" << password;
-    
-    QMessageBox::information(this, "注册成功", "账号注册成功！");
+    QString messageRES = QString("用户 ID：%1").arg(userReg);
+    QMessageBox::information(this, "注册成功", messageRES);
     showLoginWindow();
 }
     
