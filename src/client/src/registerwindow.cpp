@@ -145,9 +145,18 @@ void RegisterWindow::handleRegister() {
     qDebug() << "注册信息 - 用户名:" << username 
             //  << "账号:" << account 
                 << "密码:" << password;
-    QString messageRES = QString("用户 ID：%1").arg(userReg);
-    QMessageBox::information(this, "注册成功", messageRES);
-    showLoginWindow();
+    if (userReg == firstuserReg) {
+        QMessageBox::warning(this, "错误", "用户名已存在，请重新输入");
+        return;
+    }
+    else {
+        firstuserReg = userReg;
+        QString messageRES = QString("用户 ID：%1").arg(userReg);
+        QMessageBox::information(this, "注册成功", messageRES);
+        showLoginWindow();
+    }
+    
+    
 }
     
 void RegisterWindow::showLoginWindow() {

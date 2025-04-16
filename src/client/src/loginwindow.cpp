@@ -140,6 +140,11 @@ void LoginWindow::handleLogin() {
         // showMainWindow();
         this->close();
     }
+    else{
+        QString errMsg = QString::fromUtf8("密码或账号输入错误");
+        QMessageBox::information(this, "登录失败", errMsg); 
+    }
+    
 }
 
 void LoginWindow::showRegisterWindow() {
