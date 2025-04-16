@@ -1,4 +1,4 @@
-# Install script for directory: /home/nikonikoni/桌面/chatserver/src
+# Install script for directory: /home/nikonikoni/桌面/chatserver2/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nikonikoni/桌面/chatserver/build/src/server/cmake_install.cmake")
-  include("/home/nikonikoni/桌面/chatserver/build/src/client/cmake_install.cmake")
+  include("/home/nikonikoni/桌面/chatserver2/build/src/server/cmake_install.cmake")
+  include("/home/nikonikoni/桌面/chatserver2/build/src/client/cmake_install.cmake")
 
 endif()
 

@@ -2,79 +2,97 @@
 #include "registerwindow.h"
 #include "MainWindow.h"
 #include "public.h"
-//**********************************************登录窗口类实现*******************************************
 void LoginWindow::setupUI() {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    
-    /* ======== 顶部Logo区域 ======== */
-    QLabel *logoLabel = new QLabel;
-    logoLabel->setPixmap(QPixmap(":/icons/wechat-logo.png").scaled(80, 80, Qt::KeepAspectRatio));
-    logoLabel->setAlignment(Qt::AlignCenter);
-    mainLayout->addWidget(logoLabel, 0, Qt::AlignCenter);
-    mainLayout->addSpacing(30);
+    this->setStyleSheet(R"(
+        QWidget {
+            background-color: #ffffff;
+            font-family: 'Segoe UI';
+            color: #212529;
+        }
+    )");
 
-    /* ======== 输入表单区域 ======== */
-    QFormLayout *formLayout = new QFormLayout;
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setContentsMargins(40, 40, 40, 40);
+    mainLayout->setSpacing(20);
+    mainLayout->setAlignment(Qt::AlignCenter);
+
+    QLabel *logoLabel = new QLabel;
+    logoLabel->setPixmap(QPixmap(":/icons/wechat-logo.png").scaled(80, 80, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    logoLabel->setAlignment(Qt::AlignCenter);
+    mainLayout->addWidget(logoLabel);
 
     accountEdit = new QLineEdit;
-    accountEdit->setPlaceholderText("请输入账号");
-    accountEdit->setFixedHeight(40);
-    accountEdit->setStyleSheet("QLineEdit { border: 1px solid #E5E5E5; border-radius: 4px; padding: 0 10px; }");
+    accountEdit->setPlaceholderText("账号");
+    accountEdit->setStyleSheet(R"(
+        QLineEdit {
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+        QLineEdit:focus {
+            border: 1px solid #86b7fe;
+            outline: none;
+        }
+    )");
 
     passwordEdit = new QLineEdit;
     passwordEdit->setEchoMode(QLineEdit::Password);
-    passwordEdit->setPlaceholderText("请输入密码");
-    passwordEdit->setFixedHeight(40);
+    passwordEdit->setPlaceholderText("密码");
     passwordEdit->setStyleSheet(accountEdit->styleSheet());
 
-    formLayout->addRow("账号", accountEdit);
-    formLayout->addRow("密码", passwordEdit);
-    formLayout->setLabelAlignment(Qt::AlignLeft);
-    formLayout->setContentsMargins(20, 0, 20, 0);
-    mainLayout->addLayout(formLayout);    
+    mainLayout->addWidget(accountEdit);
+    mainLayout->addWidget(passwordEdit);
 
-    loginBtn = new QPushButton("登录");
-    loginBtn->setFixedHeight(40);
-    loginBtn->setStyleSheet(
-        "QPushButton { background-color: #07C160; color: white; border-radius: 4px; }"
-        "QPushButton:hover { background-color: #05A850; }"
-    );
-    mainLayout->addSpacing(20);
+    loginBtn = new QPushButton("立即登录");
+    loginBtn->setCursor(Qt::PointingHandCursor);
+    loginBtn->setStyleSheet(R"(
+        QPushButton {
+            background-color: #0d6efd;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            padding: 10px;
+        }
+        QPushButton:hover {
+            background-color: #0b5ed7;
+        }
+    )");
     mainLayout->addWidget(loginBtn);
-    mainLayout->addSpacing(15);
 
-    /* ======== 其他选项 ======== */
-    QHBoxLayout *optionLayout = new QHBoxLayout;
-    
-    registerBtn = new QPushButton("注册账号");
-    registerBtn->setFlat(true);
-    registerBtn->setStyleSheet("color: #888888;");
-    
     QFrame *line = new QFrame;
-    line->setFrameShape(QFrame::VLine);
-    line->setStyleSheet("color: #E5E5E5;");
+    line->setFrameShape(QFrame::HLine);
+    line->setStyleSheet("color: #dee2e6;");
+    mainLayout->addWidget(line);
 
-    QPushButton *forgotBtn = new QPushButton("找回密码");
-    forgotBtn->setFlat(true);
-    forgotBtn->setStyleSheet("color: #888888;");
-
-    optionLayout->addWidget(registerBtn);
-    optionLayout->addWidget(line);
-    optionLayout->addWidget(forgotBtn);
-    optionLayout->setAlignment(Qt::AlignCenter);
-    mainLayout->addLayout(optionLayout);
-
-    /* ======== 底部区域 ======== */
-    mainLayout->addStretch();
-    
-    QLabel *footerLabel = new QLabel("使用其他方式登录");
+    QLabel *footerLabel = new QLabel("其他选项");
     footerLabel->setAlignment(Qt::AlignCenter);
-    footerLabel->setStyleSheet("color: #888888; border-top: 1px solid #E5E5E5; padding: 15px 0;");
+    footerLabel->setStyleSheet("color: #6c757d;");
     mainLayout->addWidget(footerLabel);
 
-    // 连接注册按钮信号
+    QHBoxLayout *optionLayout = new QHBoxLayout;
+    registerBtn = new QPushButton("注册");
+    registerBtn->setFlat(true);
+    registerBtn->setCursor(Qt::PointingHandCursor);
+    registerBtn->setStyleSheet("color: #6c757d;");
+
+    QPushButton *forgotBtn = new QPushButton("忘记密码");
+    forgotBtn->setFlat(true);
+    forgotBtn->setCursor(Qt::PointingHandCursor);
+    forgotBtn->setStyleSheet("color: #6c757d;");
+
+    optionLayout->addStretch();
+    optionLayout->addWidget(registerBtn);
+    optionLayout->addSpacing(20);
+    optionLayout->addWidget(forgotBtn);
+    optionLayout->addStretch();
+
+    mainLayout->addLayout(optionLayout);
+
     connect(registerBtn, &QPushButton::clicked, this, &LoginWindow::showRegisterWindow);
 }
+
 
 void LoginWindow::handleLogin() {
     // 获取输入数据
@@ -127,7 +145,7 @@ void LoginWindow::handleLogin() {
 void LoginWindow::showRegisterWindow() {
     RegisterWindow *registerWindow = new RegisterWindow(clientfd);
     // registerWindow->setAttribute(Qt::WA_DeleteOnClose); // 关闭时自动删除
-    registerWindow->resize(400, 550);
+    registerWindow->resize(360, 460);
     registerWindow->show();
     this->close(); // 关闭登录窗口
 }

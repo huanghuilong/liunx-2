@@ -1,8 +1,8 @@
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/QtButtonDemo.dir
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/edit_cache.dir
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/rebuild_cache.dir
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/list_install_components.dir
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/install.dir
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/install/local.dir
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/install/strip.dir
-/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/QtButtonDemo_autogen.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/QtButtonDemo.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/edit_cache.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/rebuild_cache.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/list_install_components.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/install.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/install/local.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/install/strip.dir
+/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/QtButtonDemo_autogen.dir

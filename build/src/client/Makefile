@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nikonikoni/桌面/chatserver
+CMAKE_SOURCE_DIR = /home/nikonikoni/桌面/chatserver2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nikonikoni/桌面/chatserver/build
+CMAKE_BINARY_DIR = /home/nikonikoni/桌面/chatserver2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/nikonikoni/桌面/chatserver/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nikonikoni/桌面/chatserver/build/CMakeFiles /home/nikonikoni/桌面/chatserver/build/src/client//CMakeFiles/progress.marks
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nikonikoni/桌面/chatserver/build/CMakeFiles 0
+	cd /home/nikonikoni/桌面/chatserver2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nikonikoni/桌面/chatserver2/build/CMakeFiles /home/nikonikoni/桌面/chatserver2/build/src/client//CMakeFiles/progress.marks
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nikonikoni/桌面/chatserver2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/clean
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/nikonikoni/桌面/chatserver/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nikonikoni/桌面/chatserver2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/client/CMakeFiles/ChatClient.dir/rule:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/ChatClient.dir/rule
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/ChatClient.dir/rule
 .PHONY : src/client/CMakeFiles/ChatClient.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ ChatClient: src/client/CMakeFiles/ChatClient.dir/rule
 
 # fast build rule for target.
 ChatClient/fast:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/build
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/build
 .PHONY : ChatClient/fast
 
 # Convenience name for target.
 src/client/CMakeFiles/ChatClient_autogen.dir/rule:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/ChatClient_autogen.dir/rule
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/client/CMakeFiles/ChatClient_autogen.dir/rule
 .PHONY : src/client/CMakeFiles/ChatClient_autogen.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ ChatClient_autogen: src/client/CMakeFiles/ChatClient_autogen.dir/rule
 
 # fast build rule for target.
 ChatClient_autogen/fast:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient_autogen.dir/build.make src/client/CMakeFiles/ChatClient_autogen.dir/build
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient_autogen.dir/build.make src/client/CMakeFiles/ChatClient_autogen.dir/build
 .PHONY : ChatClient_autogen/fast
 
 ChatClient_autogen/mocs_compilation.o: ChatClient_autogen/mocs_compilation.cpp.o
@@ -194,7 +194,7 @@ ChatClient_autogen/mocs_compilation.o: ChatClient_autogen/mocs_compilation.cpp.o
 
 # target to build an object file
 ChatClient_autogen/mocs_compilation.cpp.o:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.o
 
 ChatClient_autogen/mocs_compilation.i: ChatClient_autogen/mocs_compilation.cpp.i
@@ -202,7 +202,7 @@ ChatClient_autogen/mocs_compilation.i: ChatClient_autogen/mocs_compilation.cpp.i
 
 # target to preprocess a source file
 ChatClient_autogen/mocs_compilation.cpp.i:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.i
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.i
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.i
 
 ChatClient_autogen/mocs_compilation.s: ChatClient_autogen/mocs_compilation.cpp.s
@@ -210,7 +210,7 @@ ChatClient_autogen/mocs_compilation.s: ChatClient_autogen/mocs_compilation.cpp.s
 
 # target to generate assembly for a file
 ChatClient_autogen/mocs_compilation.cpp.s:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.s
 
 src/MainWindow.o: src/MainWindow.cpp.o
@@ -218,7 +218,7 @@ src/MainWindow.o: src/MainWindow.cpp.o
 
 # target to build an object file
 src/MainWindow.cpp.o:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o
 .PHONY : src/MainWindow.cpp.o
 
 src/MainWindow.i: src/MainWindow.cpp.i
@@ -226,7 +226,7 @@ src/MainWindow.i: src/MainWindow.cpp.i
 
 # target to preprocess a source file
 src/MainWindow.cpp.i:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.i
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.i
 .PHONY : src/MainWindow.cpp.i
 
 src/MainWindow.s: src/MainWindow.cpp.s
@@ -234,7 +234,7 @@ src/MainWindow.s: src/MainWindow.cpp.s
 
 # target to generate assembly for a file
 src/MainWindow.cpp.s:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.s
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.s
 .PHONY : src/MainWindow.cpp.s
 
 src/loginwindow.o: src/loginwindow.cpp.o
@@ -242,7 +242,7 @@ src/loginwindow.o: src/loginwindow.cpp.o
 
 # target to build an object file
 src/loginwindow.cpp.o:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o
 .PHONY : src/loginwindow.cpp.o
 
 src/loginwindow.i: src/loginwindow.cpp.i
@@ -250,7 +250,7 @@ src/loginwindow.i: src/loginwindow.cpp.i
 
 # target to preprocess a source file
 src/loginwindow.cpp.i:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.i
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.i
 .PHONY : src/loginwindow.cpp.i
 
 src/loginwindow.s: src/loginwindow.cpp.s
@@ -258,7 +258,7 @@ src/loginwindow.s: src/loginwindow.cpp.s
 
 # target to generate assembly for a file
 src/loginwindow.cpp.s:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.s
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.s
 .PHONY : src/loginwindow.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -266,7 +266,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -274,7 +274,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/main.cpp.i
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -282,7 +282,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/main.cpp.s
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/public.o: src/public.cpp.o
@@ -290,7 +290,7 @@ src/public.o: src/public.cpp.o
 
 # target to build an object file
 src/public.cpp.o:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o
 .PHONY : src/public.cpp.o
 
 src/public.i: src/public.cpp.i
@@ -298,7 +298,7 @@ src/public.i: src/public.cpp.i
 
 # target to preprocess a source file
 src/public.cpp.i:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/public.cpp.i
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/public.cpp.i
 .PHONY : src/public.cpp.i
 
 src/public.s: src/public.cpp.s
@@ -306,7 +306,7 @@ src/public.s: src/public.cpp.s
 
 # target to generate assembly for a file
 src/public.cpp.s:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/public.cpp.s
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/public.cpp.s
 .PHONY : src/public.cpp.s
 
 src/registerwindow.o: src/registerwindow.cpp.o
@@ -314,7 +314,7 @@ src/registerwindow.o: src/registerwindow.cpp.o
 
 # target to build an object file
 src/registerwindow.cpp.o:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o
 .PHONY : src/registerwindow.cpp.o
 
 src/registerwindow.i: src/registerwindow.cpp.i
@@ -322,7 +322,7 @@ src/registerwindow.i: src/registerwindow.cpp.i
 
 # target to preprocess a source file
 src/registerwindow.cpp.i:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.i
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.i
 .PHONY : src/registerwindow.cpp.i
 
 src/registerwindow.s: src/registerwindow.cpp.s
@@ -330,7 +330,7 @@ src/registerwindow.s: src/registerwindow.cpp.s
 
 # target to generate assembly for a file
 src/registerwindow.cpp.s:
-	cd /home/nikonikoni/桌面/chatserver/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.s
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.s
 .PHONY : src/registerwindow.cpp.s
 
 # Help Target
@@ -376,6 +376,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/nikonikoni/桌面/chatserver/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nikonikoni/桌面/chatserver2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

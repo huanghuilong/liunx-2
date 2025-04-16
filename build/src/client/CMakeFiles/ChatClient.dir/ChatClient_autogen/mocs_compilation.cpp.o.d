@@ -1,7 +1,7 @@
 src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o: \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/mocs_compilation.cpp \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/6YEA5652QU/moc_AddFriendDialog.cpp \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_AddFriendDialog.cpp \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -117,9 +117,9 @@ src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o: 
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/AddFriendDialog.h \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/public.h \
- /home/nikonikoni/桌面/chatserver/thirdparty/json.hpp \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/AddFriendDialog.h \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/public.h \
+ /home/nikonikoni/桌面/chatserver2/thirdparty/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/cstdlib /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -257,11 +257,11 @@ src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o: 
  /usr/include/arpa/inet.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /usr/include/c++/11/atomic \
- /home/nikonikoni/桌面/chatserver/include/server/model/group.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/groupuser.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/user.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/user.hpp \
- /home/nikonikoni/桌面/chatserver/include/public.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/group.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/groupuser.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/public.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -440,9 +440,9 @@ src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o: 
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/6YEA5652QU/moc_MainWindow.cpp \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/MainWindow.h \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_MainWindow.cpp \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/MainWindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QWidgetList \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/6YEA5652QU/moc_loginwindow.cpp \
- /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/loginwindow.h
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_loginwindow.cpp \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/loginwindow.h

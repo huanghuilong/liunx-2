@@ -1,4 +1,4 @@
-# Install script for directory: /home/nikonikoni/桌面/chatserver/src/server
+# Install script for directory: /home/nikonikoni/桌面/chatserver2/src/server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

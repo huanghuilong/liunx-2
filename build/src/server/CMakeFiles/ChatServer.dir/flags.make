@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/nikonikoni/桌面/chatserver/include -I/home/nikonikoni/桌面/chatserver/include/server -I/home/nikonikoni/桌面/chatserver/include/server/db -I/home/nikonikoni/桌面/chatserver/include/server/model -I/home/nikonikoni/桌面/chatserver/include/server/redis -I/home/nikonikoni/桌面/chatserver/thirdparty
+CXX_INCLUDES = -I/home/nikonikoni/桌面/chatserver2/include -I/home/nikonikoni/桌面/chatserver2/include/server -I/home/nikonikoni/桌面/chatserver2/include/server/db -I/home/nikonikoni/桌面/chatserver2/include/server/model -I/home/nikonikoni/桌面/chatserver2/include/server/redis -I/home/nikonikoni/桌面/chatserver2/thirdparty
 
 CXX_FLAGS = -g
 

@@ -5,6 +5,7 @@ class RegisterWindow : public QWidget {
 public:
     RegisterWindow(int clientfd, QWidget *parent = nullptr) : QWidget(parent), clientfd(clientfd) {
         setupUI();
+        setWindowTitle("聊天客户端");
     }
 
 private:

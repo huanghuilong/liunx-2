@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nikonikoni/桌面/chatserver/test/testqt
+CMAKE_SOURCE_DIR = /home/nikonikoni/桌面/chatserver2/test/testqt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nikonikoni/桌面/chatserver/test/testqt/build
+CMAKE_BINARY_DIR = /home/nikonikoni/桌面/chatserver2/test/testqt/build
 
 # Utility rule file for QtButtonDemo_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/QtButtonDemo_autogen.dir/compiler_depend.make
 include CMakeFiles/QtButtonDemo_autogen.dir/progress.make
 
 CMakeFiles/QtButtonDemo_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QtButtonDemo"
-	/usr/bin/cmake -E cmake_autogen /home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/QtButtonDemo_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QtButtonDemo"
+	/usr/bin/cmake -E cmake_autogen /home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/QtButtonDemo_autogen.dir/AutogenInfo.json ""
 
 QtButtonDemo_autogen: CMakeFiles/QtButtonDemo_autogen
 QtButtonDemo_autogen: CMakeFiles/QtButtonDemo_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/QtButtonDemo_autogen.dir/clean:
 .PHONY : CMakeFiles/QtButtonDemo_autogen.dir/clean
 
 CMakeFiles/QtButtonDemo_autogen.dir/depend:
-	cd /home/nikonikoni/桌面/chatserver/test/testqt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nikonikoni/桌面/chatserver/test/testqt /home/nikonikoni/桌面/chatserver/test/testqt /home/nikonikoni/桌面/chatserver/test/testqt/build /home/nikonikoni/桌面/chatserver/test/testqt/build /home/nikonikoni/桌面/chatserver/test/testqt/build/CMakeFiles/QtButtonDemo_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nikonikoni/桌面/chatserver2/test/testqt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nikonikoni/桌面/chatserver2/test/testqt /home/nikonikoni/桌面/chatserver2/test/testqt /home/nikonikoni/桌面/chatserver2/test/testqt/build /home/nikonikoni/桌面/chatserver2/test/testqt/build /home/nikonikoni/桌面/chatserver2/test/testqt/build/CMakeFiles/QtButtonDemo_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/QtButtonDemo_autogen.dir/depend
 

@@ -1,9 +1,9 @@
 src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o: \
- /home/nikonikoni/桌面/chatserver/src/client/src/loginwindow.cpp \
+ /home/nikonikoni/桌面/chatserver2/src/client/src/loginwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/nikonikoni/桌面/chatserver/src/client/include/loginwindow.h \
- /home/nikonikoni/桌面/chatserver/src/client/include/public.h \
- /home/nikonikoni/桌面/chatserver/thirdparty/json.hpp \
+ /home/nikonikoni/桌面/chatserver2/src/client/include/loginwindow.h \
+ /home/nikonikoni/桌面/chatserver2/src/client/include/public.h \
+ /home/nikonikoni/桌面/chatserver2/thirdparty/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -256,11 +256,11 @@ src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o: \
  /usr/include/arpa/inet.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /usr/include/c++/11/atomic \
- /home/nikonikoni/桌面/chatserver/include/server/model/group.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/groupuser.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/user.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/user.hpp \
- /home/nikonikoni/桌面/chatserver/include/public.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/group.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/groupuser.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/public.hpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -439,8 +439,8 @@ src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
- /home/nikonikoni/桌面/chatserver/src/client/include/registerwindow.h \
- /home/nikonikoni/桌面/chatserver/src/client/include/MainWindow.h \
- /home/nikonikoni/桌面/chatserver/src/client/include/AddFriendDialog.h \
+ /home/nikonikoni/桌面/chatserver2/src/client/include/registerwindow.h \
+ /home/nikonikoni/桌面/chatserver2/src/client/include/MainWindow.h \
+ /home/nikonikoni/桌面/chatserver2/src/client/include/AddFriendDialog.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QWidgetList \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h

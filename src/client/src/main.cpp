@@ -49,7 +49,7 @@ int main(int argc, char **argv)
     // 创建窗口并开始登录
     QApplication app(argc, argv);
     LoginWindow window(clientfd);
-    window.resize(400, 500);
+    window.resize(360, 360);
     window.show();
     return app.exec();
 

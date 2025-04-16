@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nikonikoni/桌面/chatserver
+CMAKE_SOURCE_DIR = /home/nikonikoni/桌面/chatserver2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nikonikoni/桌面/chatserver/build
+CMAKE_BINARY_DIR = /home/nikonikoni/桌面/chatserver2/build
 
 # Utility rule file for ChatClient_autogen.
 
@@ -67,8 +67,8 @@ include src/client/CMakeFiles/ChatClient_autogen.dir/compiler_depend.make
 include src/client/CMakeFiles/ChatClient_autogen.dir/progress.make
 
 src/client/CMakeFiles/ChatClient_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nikonikoni/桌面/chatserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ChatClient"
-	cd /home/nikonikoni/桌面/chatserver/build/src/client && /usr/bin/cmake -E cmake_autogen /home/nikonikoni/桌面/chatserver/build/src/client/CMakeFiles/ChatClient_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target ChatClient"
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/cmake -E cmake_autogen /home/nikonikoni/桌面/chatserver2/build/src/client/CMakeFiles/ChatClient_autogen.dir/AutogenInfo.json ""
 
 ChatClient_autogen: src/client/CMakeFiles/ChatClient_autogen
 ChatClient_autogen: src/client/CMakeFiles/ChatClient_autogen.dir/build.make
@@ -79,10 +79,10 @@ src/client/CMakeFiles/ChatClient_autogen.dir/build: ChatClient_autogen
 .PHONY : src/client/CMakeFiles/ChatClient_autogen.dir/build
 
 src/client/CMakeFiles/ChatClient_autogen.dir/clean:
-	cd /home/nikonikoni/桌面/chatserver/build/src/client && $(CMAKE_COMMAND) -P CMakeFiles/ChatClient_autogen.dir/cmake_clean.cmake
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && $(CMAKE_COMMAND) -P CMakeFiles/ChatClient_autogen.dir/cmake_clean.cmake
 .PHONY : src/client/CMakeFiles/ChatClient_autogen.dir/clean
 
 src/client/CMakeFiles/ChatClient_autogen.dir/depend:
-	cd /home/nikonikoni/桌面/chatserver/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nikonikoni/桌面/chatserver /home/nikonikoni/桌面/chatserver/src/client /home/nikonikoni/桌面/chatserver/build /home/nikonikoni/桌面/chatserver/build/src/client /home/nikonikoni/桌面/chatserver/build/src/client/CMakeFiles/ChatClient_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nikonikoni/桌面/chatserver2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nikonikoni/桌面/chatserver2 /home/nikonikoni/桌面/chatserver2/src/client /home/nikonikoni/桌面/chatserver2/build /home/nikonikoni/桌面/chatserver2/build/src/client /home/nikonikoni/桌面/chatserver2/build/src/client/CMakeFiles/ChatClient_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/client/CMakeFiles/ChatClient_autogen.dir/depend
 

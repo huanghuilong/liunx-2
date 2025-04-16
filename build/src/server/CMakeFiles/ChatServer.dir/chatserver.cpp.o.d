@@ -1,7 +1,7 @@
 src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
- /home/nikonikoni/桌面/chatserver/src/server/chatserver.cpp \
+ /home/nikonikoni/桌面/chatserver2/src/server/chatserver.cpp \
  /usr/include/stdc-predef.h \
- /home/nikonikoni/桌面/chatserver/include/server/chatserver.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/chatserver.hpp \
  /usr/local/include/muduo/net/TcpServer.h \
  /usr/local/include/muduo/base/Atomic.h \
  /usr/local/include/muduo/base/noncopyable.h \
@@ -265,7 +265,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /usr/local/include/muduo/base/Mutex.h \
  /usr/local/include/muduo/base/CurrentThread.h \
  /usr/local/include/muduo/net/TimerId.h \
- /home/nikonikoni/桌面/chatserver/thirdparty/json.hpp \
+ /home/nikonikoni/桌面/chatserver2/thirdparty/json.hpp \
  /usr/include/c++/11/cassert /usr/include/c++/11/ciso646 \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
@@ -312,23 +312,23 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
- /home/nikonikoni/桌面/chatserver/include/server/chatservice.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/chatservice.hpp \
  /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /home/nikonikoni/桌面/chatserver/include/server/redis/redis.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/redis/redis.hpp \
  /usr/include/hiredis/hiredis.h /usr/include/hiredis/read.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/hiredis/sds.h \
  /usr/include/hiredis/alloc.h /usr/include/c++/11/stdlib.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h \
- /home/nikonikoni/桌面/chatserver/include/server/model/groupmodel.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/group.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/groupuser.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/user.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/friendmodel.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/usermodel.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/offlinemessagemodel.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/groupmodel.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/group.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/groupuser.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/friendmodel.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/usermodel.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/offlinemessagemodel.hpp \
  /usr/include/c++/11/iostream

@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver/build/src/client/ChatClient_autogen",
-	"CMAKE_BINARY_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver/build/src/client",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver/src/client",
+	"BUILD_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client/ChatClient_autogen",
+	"CMAKE_BINARY_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver2/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver2/src/client",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/nikonikoni/\u684c\u9762/chatserver/src/client/CMakeLists.txt",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/CMakeLists.txt",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
@@ -56,45 +56,45 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver",
+	"CMAKE_SOURCE_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver2",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/include/AddFriendDialog.h",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/AddFriendDialog.h",
 			"MU",
 			"6YEA5652QU/moc_AddFriendDialog.cpp",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/include/MainWindow.h",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/MainWindow.h",
 			"MU",
 			"6YEA5652QU/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/include/loginwindow.h",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/loginwindow.h",
 			"MU",
 			"6YEA5652QU/moc_loginwindow.cpp",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/include/public.h",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/public.h",
 			"MU",
 			"6YEA5652QU/moc_public.cpp",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/include/registerwindow.h",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/registerwindow.h",
 			"MU",
 			"6YEA5652QU/moc_registerwindow.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver/build/src/client/ChatClient_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver/build/src/client/ChatClient_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client/ChatClient_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client/ChatClient_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -112,13 +112,13 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/nikonikoni/\u684c\u9762/chatserver/include",
-		"/home/nikonikoni/\u684c\u9762/chatserver/include/server",
-		"/home/nikonikoni/\u684c\u9762/chatserver/include/server/db",
-		"/home/nikonikoni/\u684c\u9762/chatserver/include/server/model",
-		"/home/nikonikoni/\u684c\u9762/chatserver/include/server/redis",
-		"/home/nikonikoni/\u684c\u9762/chatserver/thirdparty",
-		"/home/nikonikoni/\u684c\u9762/chatserver/src/client/include",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/include",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/include/server",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/include/server/db",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/include/server/model",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/include/server/redis",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/thirdparty",
+		"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -144,41 +144,41 @@
 		"-c",
 		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver/build/src/client/ChatClient_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client/ChatClient_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 2,
-	"PARSE_CACHE_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver/build/src/client/CMakeFiles/ChatClient_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client/CMakeFiles/ChatClient_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver/build/src/client/CMakeFiles/ChatClient_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client/CMakeFiles/ChatClient_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/src/MainWindow.cpp",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/MainWindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/src/loginwindow.cpp",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/loginwindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/src/main.cpp",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/src/public.cpp",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/public.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/nikonikoni/\u684c\u9762/chatserver/src/client/src/registerwindow.cpp",
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/registerwindow.cpp",
 			"MU",
 			null
 		]

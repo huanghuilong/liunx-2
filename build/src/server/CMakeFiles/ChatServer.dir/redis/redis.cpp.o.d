@@ -1,7 +1,7 @@
 src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: \
- /home/nikonikoni/桌面/chatserver/src/server/redis/redis.cpp \
+ /home/nikonikoni/桌面/chatserver2/src/server/redis/redis.cpp \
  /usr/include/stdc-predef.h \
- /home/nikonikoni/桌面/chatserver/include/server/redis/redis.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/redis/redis.hpp \
  /usr/include/hiredis/hiredis.h /usr/include/hiredis/read.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

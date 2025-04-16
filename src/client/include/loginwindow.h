@@ -9,6 +9,8 @@ public:
         : clientfd(clientfd), QWidget(parent){
         // 界面初始化
         setupUI();
+
+        setWindowTitle("聊天客户端");
         // 连接登录按钮信号
         connect(loginBtn, &QPushButton::clicked, this, &LoginWindow::handleLogin);
     }

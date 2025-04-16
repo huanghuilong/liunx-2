@@ -1,15 +1,15 @@
-/home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/include/main.moc: /home/nikonikoni/桌面/chatserver/src/client/src/main.cpp \
-  /home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/moc_predefs.h \
-  /home/nikonikoni/桌面/chatserver/include/public.hpp \
-  /home/nikonikoni/桌面/chatserver/include/server/model/group.hpp \
-  /home/nikonikoni/桌面/chatserver/include/server/model/groupuser.hpp \
-  /home/nikonikoni/桌面/chatserver/include/server/model/user.hpp \
-  /home/nikonikoni/桌面/chatserver/src/client/include/AddFriendDialog.h \
-  /home/nikonikoni/桌面/chatserver/src/client/include/MainWindow.h \
-  /home/nikonikoni/桌面/chatserver/src/client/include/loginwindow.h \
-  /home/nikonikoni/桌面/chatserver/src/client/include/public.h \
-  /home/nikonikoni/桌面/chatserver/src/client/include/registerwindow.h \
-  /home/nikonikoni/桌面/chatserver/thirdparty/json.hpp \
+/home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/include/main.moc: /home/nikonikoni/桌面/chatserver2/src/client/src/main.cpp \
+  /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/moc_predefs.h \
+  /home/nikonikoni/桌面/chatserver2/include/public.hpp \
+  /home/nikonikoni/桌面/chatserver2/include/server/model/group.hpp \
+  /home/nikonikoni/桌面/chatserver2/include/server/model/groupuser.hpp \
+  /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
+  /home/nikonikoni/桌面/chatserver2/src/client/include/AddFriendDialog.h \
+  /home/nikonikoni/桌面/chatserver2/src/client/include/MainWindow.h \
+  /home/nikonikoni/桌面/chatserver2/src/client/include/loginwindow.h \
+  /home/nikonikoni/桌面/chatserver2/src/client/include/public.h \
+  /home/nikonikoni/桌面/chatserver2/src/client/include/registerwindow.h \
+  /home/nikonikoni/桌面/chatserver2/thirdparty/json.hpp \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \

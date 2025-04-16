@@ -3,111 +3,108 @@
 
 // 主窗口构造函数
 MainWindow::MainWindow(const json &responsejs, int clientfd, QWidget *parent) : QMainWindow(parent), clientfd(clientfd), responsejs(responsejs) {
-    setupUI();  // 初始化UI
-    
-    setWindowTitle("简约聊天");  // 设置窗口标题
-    resize(900, 600);           // 设置窗口大小
-    
-    // 设置窗口背景色
-    setStyleSheet("background-color: #f8f9fa;");
+    setupUI();
+
+    setWindowTitle("简约聊天");
+    setFixedSize(900, 600);  // 禁止拉伸，更有应用感
+    setStyleSheet("background-color: #f1f3f5;");  // 更柔和的背景色
 }
 
 void MainWindow::setupUI() {
-
     mainSplitter = new QSplitter(Qt::Horizontal, this);
-    mainSplitter->setHandleWidth(1);
-    
-    // 左侧面板
+    mainSplitter->setHandleWidth(2);
+
+    // ===== 左侧联系人面板 =====
     leftPanel = new QWidget;
-    leftPanel->setMinimumWidth(200);
-    leftPanel->setMaximumWidth(300);
-    leftPanel->setStyleSheet("background-color: #ffffff; border-right: 1px solid #e9ecef;");
-    
+    leftPanel->setFixedWidth(260);
+    leftPanel->setStyleSheet("background-color: #ffffff; border-right: 1px solid #dee2e6;");
+
     QVBoxLayout *leftLayout = new QVBoxLayout(leftPanel);
-    leftLayout->setContentsMargins(0, 0, 0, 0);
-    leftLayout->setSpacing(0);
-    
+    leftLayout->setContentsMargins(8, 8, 8, 8);
+    leftLayout->setSpacing(8);
+
     // 搜索框
     searchInput = new QLineEdit;
-    searchInput->setPlaceholderText("搜索");
+    searchInput->setPlaceholderText("🔍 搜索联系人");
     searchInput->setStyleSheet(
-        "QLineEdit { border: none; padding: 8px; background: #f5f5f5; border-radius: 4px; margin: 5px; }"
+        "QLineEdit { background: #f8f9fa; border: 1px solid #ced4da; border-radius: 6px; padding: 8px 12px; }"
     );
     connect(searchInput, &QLineEdit::textChanged, this, &MainWindow::onSearchTextChanged);
-    
-    // 搜索结果列表
+
+    // 搜索结果
     searchResults = new QListWidget;
     searchResults->setStyleSheet(
-        "QListWidget { border: none; background: transparent; }"
-        "QListWidget::item { height: 60px; border-bottom: 1px solid #e9ecef; padding: 8px; }"
+        "QListWidget { background: transparent; border: none; }"
+        "QListWidget::item { height: 50px; border-bottom: 1px solid #e9ecef; padding: 10px; }"
     );
     searchResults->hide();
     connect(searchResults, &QListWidget::itemClicked, this, &MainWindow::onSearchResultClicked);
-    
+
     // 联系人列表
     contactList = new QListWidget;
     contactList->setStyleSheet(
-        "QListWidget { border: none; background: transparent; }"
-        "QListWidget::item { height: 60px; border-bottom: 1px solid #e9ecef; padding: 8px; }"
+        "QListWidget { background: transparent; border: none; }"
+        "QListWidget::item { height: 50px; border-bottom: 1px solid #e9ecef; padding: 10px; }"
         "QListWidget::item:hover { background-color: #f1f3f5; }"
-        "QListWidget::item:selected { background-color: #e9ecef; }"
+        "QListWidget::item:selected { background-color: #dbe4ff; color: #364fc7; }"
     );
-    
+
     leftLayout->addWidget(searchInput);
     leftLayout->addWidget(searchResults);
     leftLayout->addWidget(contactList);
-    
-    // 右侧面板
+
+    // ===== 右侧聊天面板 =====
     rightPanel = new QWidget;
     rightPanel->setStyleSheet("background-color: #ffffff;");
-    
+
     QVBoxLayout *rightLayout = new QVBoxLayout(rightPanel);
     rightLayout->setContentsMargins(0, 0, 0, 0);
     rightLayout->setSpacing(0);
-    
-    currentChatLabel = new QLabel("选择联系人开始聊天");
+
+    currentChatLabel = new QLabel("💬 选择联系人开始聊天");
     currentChatLabel->setStyleSheet(
-        "font-size: 16px; font-weight: 500; color: #212529;"
-        "padding: 12px 16px; border-bottom: 1px solid #e9ecef;"
+        "font-size: 18px; font-weight: 600; color: #343a40;"
+        "padding: 12px 20px; border-bottom: 1px solid #e9ecef; background-color: #f8f9fa;"
     );
-    
+
     chatDisplay = new QTextEdit;
     chatDisplay->setReadOnly(true);
-    chatDisplay->setStyleSheet(
-        "QTextEdit { border: none; background-color: #f8f9fa; padding: 16px; }"
-    );
-    
+    chatDisplay->setStyleSheet("QTextEdit { background-color: #f1f3f5; border: none; padding: 16px; font-size: 14px; }");
+
+    // ===== 输入面板 =====
     QWidget *inputPanel = new QWidget;
     inputPanel->setStyleSheet("background-color: #ffffff; border-top: 1px solid #e9ecef;");
-    
+
     QHBoxLayout *inputLayout = new QHBoxLayout(inputPanel);
-    inputLayout->setContentsMargins(16, 8, 16, 8);
-    
+    inputLayout->setContentsMargins(12, 8, 12, 8);
+    inputLayout->setSpacing(8);
+
     messageInput = new QLineEdit;
-    messageInput->setPlaceholderText("输入消息...");
+    messageInput->setPlaceholderText("✏️ 输入消息...");
     messageInput->setStyleSheet(
-        "QLineEdit { border: 1px solid #e9ecef; border-radius: 4px; padding: 8px; }"
+        "QLineEdit { border: 1px solid #ced4da; border-radius: 6px; padding: 8px 12px; }"
     );
-    
+
     sendButton = new QPushButton("发送");
     sendButton->setFixedWidth(80);
     sendButton->setStyleSheet(
-        "QPushButton { background-color: #4263eb; color: white; border-radius: 4px; }"
+        "QPushButton { background-color: #4263eb; color: white; border-radius: 6px; padding: 8px; font-weight: 500; }"
         "QPushButton:hover { background-color: #3b5bdb; }"
     );
-    
+
     inputLayout->addWidget(messageInput);
     inputLayout->addWidget(sendButton);
-    
+
     rightLayout->addWidget(currentChatLabel);
     rightLayout->addWidget(chatDisplay, 1);
     rightLayout->addWidget(inputPanel);
-    
+
+    // 拼装主布局
     mainSplitter->addWidget(leftPanel);
     mainSplitter->addWidget(rightPanel);
-    
     setCentralWidget(mainSplitter);
-    
+
+    // ===== 信号连接 =====
     connect(contactList, &QListWidget::itemClicked, this, [this](QListWidgetItem *item) {
         if (item->data(Qt::UserRole + 1).toBool()) {
             onGroupItemClicked(item);
@@ -115,7 +112,7 @@ void MainWindow::setupUI() {
             onFriendItemClicked(item);
         }
     });
-    
+
     connect(sendButton, &QPushButton::clicked, this, &MainWindow::onSendButtonClicked);
     connect(messageInput, &QLineEdit::returnPressed, this, &MainWindow::onSendButtonClicked);
 }

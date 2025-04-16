@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/home/nikonikoni/桌面/chatserver/build/src/client/ChatClient_autogen/include -I/home/nikonikoni/桌面/chatserver/include -I/home/nikonikoni/桌面/chatserver/include/server -I/home/nikonikoni/桌面/chatserver/include/server/db -I/home/nikonikoni/桌面/chatserver/include/server/model -I/home/nikonikoni/桌面/chatserver/include/server/redis -I/home/nikonikoni/桌面/chatserver/thirdparty -I/home/nikonikoni/桌面/chatserver/src/client/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork
+CXX_INCLUDES = -I/home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/include -I/home/nikonikoni/桌面/chatserver2/include -I/home/nikonikoni/桌面/chatserver2/include/server -I/home/nikonikoni/桌面/chatserver2/include/server/db -I/home/nikonikoni/桌面/chatserver2/include/server/model -I/home/nikonikoni/桌面/chatserver2/include/server/redis -I/home/nikonikoni/桌面/chatserver2/thirdparty -I/home/nikonikoni/桌面/chatserver2/src/client/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork
 
 CXX_FLAGS = -g -fPIC -std=gnu++17
 

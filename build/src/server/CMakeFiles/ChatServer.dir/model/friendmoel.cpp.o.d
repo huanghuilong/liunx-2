@@ -1,8 +1,8 @@
 src/server/CMakeFiles/ChatServer.dir/model/friendmoel.cpp.o: \
- /home/nikonikoni/桌面/chatserver/src/server/model/friendmoel.cpp \
+ /home/nikonikoni/桌面/chatserver2/src/server/model/friendmoel.cpp \
  /usr/include/stdc-predef.h \
- /home/nikonikoni/桌面/chatserver/include/server/model/friendmodel.hpp \
- /home/nikonikoni/桌面/chatserver/include/server/model/user.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/friendmodel.hpp \
+ /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -135,7 +135,7 @@ src/server/CMakeFiles/ChatServer.dir/model/friendmoel.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/nikonikoni/桌面/chatserver/include/server/db/db.h \
+ /home/nikonikoni/桌面/chatserver2/include/server/db/db.h \
  /usr/include/mysql/mysql.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
  /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
@@ -172,11 +172,11 @@ src/server/CMakeFiles/ChatServer.dir/model/friendmoel.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/nikonikoni/桌面/chatserver/include/server/db/dbConnectionpool.h \
+ /home/nikonikoni/桌面/chatserver2/include/server/db/dbConnectionpool.h \
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_heap.h /usr/include/c++/11/bits/stl_queue.h \
- /home/nikonikoni/桌面/chatserver/include/server/db/db.h \
+ /home/nikonikoni/桌面/chatserver2/include/server/db/db.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/system_error \
  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
  /usr/include/c++/11/stdexcept /usr/include/c++/11/bits/std_mutex.h \
