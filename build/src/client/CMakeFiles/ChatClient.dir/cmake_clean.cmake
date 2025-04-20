@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "ChatClient_autogen"
   "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/ChatClient.dir/src/CreateGroupDialog.cpp.o"
+  "CMakeFiles/ChatClient.dir/src/CreateGroupDialog.cpp.o.d"
   "CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o"
   "CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o.d"
   "CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o"

@@ -16,6 +16,7 @@
 #include <vector>
 #include "EditInfoDialog.h"
 #include "PasswordVerifyDialog.h"
+#include "CreateGroupDialog.h"
 
 
 // 聊天消息结构
@@ -57,6 +58,9 @@ private slots:
     // 添加设置按钮点击槽函数
     void onSettingsClicked();
 
+    // 发送创建群组的请求
+    void sendCreateGroupRequest(const QString &name, const QString &desc);
+
 private:
     // 初始化UI界面
     void setupUI();
@@ -84,7 +88,14 @@ private:
     
     QListWidget *contactList;   // 联系人列表
     
+    QWidget *titleWidget;        // 聊天对方信息窗口
+    QHBoxLayout *titleLayout;     // 聊天对方信息容器 
+    QLabel *currentChatLabel;   // 当前聊天标题
+    QPushButton *createGroupBtn; // 创建群组按钮
+
     QTextEdit *chatDisplay;     // 聊天显示区域
+
+    QWidget *inputPanel;        // 输入面板   
     QLineEdit *messageInput;    // 消息输入框
     QPushButton *sendButton;    // 发送按钮
     QPushButton *settingsButton;//设置按钮
@@ -92,7 +103,6 @@ private:
     QLineEdit *searchInput;
     QListWidget *searchResults;
     
-    QLabel *currentChatLabel;   // 当前聊天标题
     int clientfd;
 
     const json &responsejs;           //传输进来的json消息

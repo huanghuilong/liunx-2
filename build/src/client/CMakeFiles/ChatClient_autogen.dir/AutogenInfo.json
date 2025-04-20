@@ -68,6 +68,12 @@
 			null
 		],
 		[
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/CreateGroupDialog.h",
+			"MU",
+			"6YEA5652QU/moc_CreateGroupDialog.cpp",
+			null
+		],
+		[
 			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/EditInfoDialog.h",
 			"MU",
 			"6YEA5652QU/moc_EditInfoDialog.cpp",
@@ -169,6 +175,11 @@
 	"SETTINGS_FILE" : "/home/nikonikoni/\u684c\u9762/chatserver2/build/src/client/CMakeFiles/ChatClient_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/CreateGroupDialog.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/EditInfoDialog.cpp",
 			"MU",

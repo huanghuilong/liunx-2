@@ -68,12 +68,45 @@ void MainWindow::setupUI() {
         "padding: 12px 20px; border-bottom: 1px solid #e9ecef; background-color: #f8f9fa;"
     );
 
+    titleWidget = new QWidget;
+    titleLayout = new QHBoxLayout(titleWidget);
+    titleLayout->setContentsMargins(12, 0, 12, 0);
+    titleLayout->setSpacing(0);
+
+    createGroupBtn = new QPushButton("+");
+    createGroupBtn->setFixedSize(30, 30);
+    createGroupBtn->setStyleSheet(
+        "QPushButton {"
+        "    background-color: #4263eb;"
+        "    color: white;"
+        "    border-radius: 15px;"
+        "    font-size: 18px;"
+        "    font-weight: bold;"
+        "}"
+        "QPushButton:hover {"
+        "    background-color: #3b5bdb;"
+        "}"
+    );
+    createGroupBtn->setToolTip("创建群组");
+
+    titleLayout->addWidget(currentChatLabel);
+    titleLayout->addStretch();
+    titleLayout->addWidget(createGroupBtn);
+
+    // 连接创建群组按钮信号
+    connect(createGroupBtn, &QPushButton::clicked, this, [this]() {
+        CreateGroupDialog *dialog = new CreateGroupDialog(this);
+        connect(dialog, &CreateGroupDialog::groupCreationRequested, 
+                this, &MainWindow::sendCreateGroupRequest);
+        dialog->exec();
+    });
+
     chatDisplay = new QTextEdit;
     chatDisplay->setReadOnly(true);
     chatDisplay->setStyleSheet("QTextEdit { background-color: #f1f3f5; border: none; padding: 16px; font-size: 14px; }");
 
     // ===== 输入面板 =====
-    QWidget *inputPanel = new QWidget;
+    inputPanel = new QWidget;
     inputPanel->setStyleSheet("background-color: #ffffff; border-top: 1px solid #e9ecef;");
 
     QHBoxLayout *inputLayout = new QHBoxLayout(inputPanel);
@@ -116,7 +149,7 @@ void MainWindow::setupUI() {
     inputLayout->addWidget(messageInput);
     inputLayout->addWidget(sendButton);
 
-    rightLayout->addWidget(currentChatLabel);
+    rightLayout->addWidget(titleWidget);
     rightLayout->addWidget(chatDisplay, 1);
     rightLayout->addWidget(inputPanel);
 
@@ -580,6 +613,24 @@ void MainWindow::showEditInfoDialog() {
 
 void MainWindow::onSettingsClicked() {
     // 你的实现代码
+}
+
+void MainWindow::sendCreateGroupRequest(const QString &name, const QString &desc) {
+    // 发送创建群组请求
+    json js;
+    js["msgid"] = CREATE_GROUP_MSG;
+    js["id"] = currentUser.getId();
+    js["groupname"] = name.toStdString();
+    js["groupdesc"] = desc.toStdString();
+    
+    string buffer = js.dump();
+    int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+    if (len == -1) {
+        QMessageBox::warning(this, "错误", "创建群组请求发送失败");
+    } else {
+        QMessageBox::information(this, "成功", "群组创建请求已发送");
+    }
+    
 }
 
 #include "MainWindow.moc"

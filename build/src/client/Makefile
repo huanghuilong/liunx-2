@@ -213,6 +213,30 @@ ChatClient_autogen/mocs_compilation.cpp.s:
 	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.s
 
+src/CreateGroupDialog.o: src/CreateGroupDialog.cpp.o
+.PHONY : src/CreateGroupDialog.o
+
+# target to build an object file
+src/CreateGroupDialog.cpp.o:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/CreateGroupDialog.cpp.o
+.PHONY : src/CreateGroupDialog.cpp.o
+
+src/CreateGroupDialog.i: src/CreateGroupDialog.cpp.i
+.PHONY : src/CreateGroupDialog.i
+
+# target to preprocess a source file
+src/CreateGroupDialog.cpp.i:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/CreateGroupDialog.cpp.i
+.PHONY : src/CreateGroupDialog.cpp.i
+
+src/CreateGroupDialog.s: src/CreateGroupDialog.cpp.s
+.PHONY : src/CreateGroupDialog.s
+
+# target to generate assembly for a file
+src/CreateGroupDialog.cpp.s:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/CreateGroupDialog.cpp.s
+.PHONY : src/CreateGroupDialog.cpp.s
+
 src/EditInfoDialog.o: src/EditInfoDialog.cpp.o
 .PHONY : src/EditInfoDialog.o
 
@@ -398,6 +422,9 @@ help:
 	@echo "... ChatClient_autogen/mocs_compilation.o"
 	@echo "... ChatClient_autogen/mocs_compilation.i"
 	@echo "... ChatClient_autogen/mocs_compilation.s"
+	@echo "... src/CreateGroupDialog.o"
+	@echo "... src/CreateGroupDialog.i"
+	@echo "... src/CreateGroupDialog.s"
 	@echo "... src/EditInfoDialog.o"
 	@echo "... src/EditInfoDialog.i"
 	@echo "... src/EditInfoDialog.s"

@@ -9,6 +9,7 @@ User g_currentUser;
 std::vector<User> g_currentUserFriendList;
 std::vector<Group> g_currentUserGroupList;
 std::vector<User> g_allUsersList; //全部用户
+std::vector<Group> g_allGroupsList; //全部群组
 int firstuserReg = 0;
 int userReg = 0;
 std::string errno_Msg;

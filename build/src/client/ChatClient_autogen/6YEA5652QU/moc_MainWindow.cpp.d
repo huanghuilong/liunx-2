@@ -5,6 +5,7 @@
   /home/nikonikoni/桌面/chatserver2/include/server/model/groupuser.hpp \
   /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
   /home/nikonikoni/桌面/chatserver2/src/client/include/AddFriendDialog.h \
+  /home/nikonikoni/桌面/chatserver2/src/client/include/CreateGroupDialog.h \
   /home/nikonikoni/桌面/chatserver2/src/client/include/EditInfoDialog.h \
   /home/nikonikoni/桌面/chatserver2/src/client/include/PasswordVerifyDialog.h \
   /home/nikonikoni/桌面/chatserver2/src/client/include/public.h \

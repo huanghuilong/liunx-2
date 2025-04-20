@@ -446,4 +446,5 @@ src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
  /home/nikonikoni/桌面/chatserver2/src/client/include/EditInfoDialog.h \
  /home/nikonikoni/桌面/chatserver2/src/client/include/PasswordVerifyDialog.h \
+ /home/nikonikoni/桌面/chatserver2/src/client/include/CreateGroupDialog.h \
  /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/include/main.moc
