@@ -59,7 +59,6 @@ int main(int argc, char **argv)
 // 处理注册的响应逻辑
 void doRegResponse(json &responsejs)
 {
-    std::cout << "i can into here , here is doRegResponse!" << std::endl;
     if (0 != responsejs["errno"].get<int>()) // 注册失败
     {
         cerr << "name is already exist, register error!" << endl;
@@ -294,6 +293,15 @@ void readTaskHandler(int clientfd)
         {
             doRegResponse(js);
             sem_post(&rwsem);    // 通知主线程，注册结果处理完成
+            continue;
+        }
+
+        if (CREATE_GROUP_MSG_ACK == msgtype){
+            if (0 == js["errno"].get<int>())
+            {
+                groupReg = js["groupid"].get<int>();
+            }
+            sem_post(&rwsem);    // 通知主线程，创建结果处理完成
             continue;
         }
     }

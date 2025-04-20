@@ -81,6 +81,8 @@ private:
     void showAddFriendDialog(const User &user);
     void showEditInfoDialog();
 
+    void updataWindow();        // 刷新聊天框中的好友和群组
+
     // UI组件
     QSplitter *mainSplitter;    // 主分割器，用于分割左右面板
     QWidget *leftPanel;         // 左侧联系人面板

@@ -133,6 +133,8 @@ extern std::vector<Group> g_currentUserGroupList;
 extern std::vector<User> g_allUsersList;           // 所有用户列表（模拟数据库）
 extern std::vector<Group> g_allGroupsList;         // 所有群组列表（模拟数据库）
 extern int userReg;
+extern int groupReg;
+extern int firstgroupReg;
 extern int firstuserReg;
 
 // 函数声明

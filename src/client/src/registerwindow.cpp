@@ -142,9 +142,7 @@ void RegisterWindow::handleRegister() {
     
     sem_wait(&rwsem); // 等待信号量，子线程处理完注册消息会通知
     // ############################# 结束 ###################################
-    qDebug() << "注册信息 - 用户名:" << username 
-            //  << "账号:" << account 
-                << "密码:" << password;
+
     if (userReg == firstuserReg) {
         QMessageBox::warning(this, "错误", "用户名已存在，请重新输入");
         return;

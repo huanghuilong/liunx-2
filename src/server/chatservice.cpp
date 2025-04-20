@@ -321,9 +321,25 @@ void ChatService::createGroup(const TcpConnectionPtr &conn, json &js, Timestamp 
     Group group(-1, name, desc);
     if (_groupModel.createGroup(group))
     {
+        // 创建成功
         // 存储群组创建人信息
         _groupModel.addGroup(userid, group.getId(), "creator");
+        // 返回群组创建成功的消息
+        json response;
+        response["msgid"] = CREATE_GROUP_MSG_ACK;
+        response["errno"] = 0;
+        response["groupid"] = group.getId();
+        conn->send(response.dump());
     }
+    else 
+    {
+        // 创建失败
+        json response;
+        response["msgid"] = CREATE_GROUP_MSG_ACK;
+        response["errno"] = 1;
+        conn->send(response.dump());
+    }
+
 }
 
 // 加入群组业务

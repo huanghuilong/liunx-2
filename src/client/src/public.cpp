@@ -12,6 +12,8 @@ std::vector<User> g_allUsersList; //全部用户
 std::vector<Group> g_allGroupsList; //全部群组
 int firstuserReg = 0;
 int userReg = 0;
+int groupReg = 0;
+int firstgroupReg = 0;
 std::string errno_Msg;
 
 // 初始化信号量（如果需要）

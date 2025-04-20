@@ -19,6 +19,7 @@ enum EnMsgType
     GROUP_CHAT_MSG, // 群聊天
 
     MODIFY_USERINFO_MSG, // 修改用户信息
+    CREATE_GROUP_MSG_ACK, // 创建群组响应消息
 };
 
 #endif

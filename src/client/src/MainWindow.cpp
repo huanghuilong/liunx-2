@@ -99,6 +99,9 @@ void MainWindow::setupUI() {
         connect(dialog, &CreateGroupDialog::groupCreationRequested, 
                 this, &MainWindow::sendCreateGroupRequest);
         dialog->exec();
+
+        // 预先创建窗口但不显示
+        updataWindow();
     });
 
     chatDisplay = new QTextEdit;
@@ -630,7 +633,32 @@ void MainWindow::sendCreateGroupRequest(const QString &name, const QString &desc
     } else {
         QMessageBox::information(this, "成功", "群组创建请求已发送");
     }
+    sem_wait(&rwsem); // 等待信号量，子线程处理完注册消息会通知
+
+    if (groupReg == firstgroupReg) {
+        QMessageBox::warning(this, "错误", "群组名已存在，请重新输入");
+        return;
+    }
+    else {
+        firstuserReg = userReg;
+        QString messageRES = QString("群组 ID：%1").arg(groupReg);
+        QMessageBox::information(this, "注册成功", messageRES);
+        g_currentUserGroupList.push_back(Group(groupReg, name.toStdString(), desc.toStdString()));
+    }
     
+    return;
+}
+
+void MainWindow::updataWindow(){
+    // 预先创建窗口但不显示
+    MainWindow *mainwindow = new MainWindow(responsejs, clientfd);
+    mainwindow->updateUserData(g_currentUser, g_currentUserFriendList,
+                            g_currentUserGroupList, g_allUsersList);
+    mainwindow->hide(); // 先隐藏
+
+    // 关闭当前窗口后立即显示新窗口
+    this->close(); 
+    mainwindow->show();
 }
 
 #include "MainWindow.moc"
