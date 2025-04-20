@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[14];
-    char stringdata0[177];
+    QByteArrayData data[15];
+    char stringdata0[195];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,14 +45,16 @@ QT_MOC_LITERAL(9, 118, 18), // "onAddFriendClicked"
 QT_MOC_LITERAL(10, 137, 4), // "User"
 QT_MOC_LITERAL(11, 142, 4), // "user"
 QT_MOC_LITERAL(12, 147, 7), // "message"
-QT_MOC_LITERAL(13, 155, 21) // "onSearchResultClicked"
+QT_MOC_LITERAL(13, 155, 21), // "onSearchResultClicked"
+QT_MOC_LITERAL(14, 177, 17) // "onSettingsClicked"
 
     },
     "MainWindow\0onFriendItemClicked\0\0"
     "QListWidgetItem*\0item\0onGroupItemClicked\0"
     "onSendButtonClicked\0onSearchTextChanged\0"
     "text\0onAddFriendClicked\0User\0user\0"
-    "message\0onSearchResultClicked"
+    "message\0onSearchResultClicked\0"
+    "onSettingsClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,7 +64,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -70,12 +72,13 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   44,    2, 0x08 /* Private */,
-       5,    1,   47,    2, 0x08 /* Private */,
-       6,    0,   50,    2, 0x08 /* Private */,
-       7,    1,   51,    2, 0x08 /* Private */,
-       9,    2,   54,    2, 0x08 /* Private */,
-      13,    1,   59,    2, 0x08 /* Private */,
+       1,    1,   49,    2, 0x08 /* Private */,
+       5,    1,   52,    2, 0x08 /* Private */,
+       6,    0,   55,    2, 0x08 /* Private */,
+       7,    1,   56,    2, 0x08 /* Private */,
+       9,    2,   59,    2, 0x08 /* Private */,
+      13,    1,   64,    2, 0x08 /* Private */,
+      14,    0,   67,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -84,6 +87,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::QString,    8,
     QMetaType::Void, 0x80000000 | 10, QMetaType::QString,   11,   12,
     QMetaType::Void, 0x80000000 | 3,    4,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -100,6 +104,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->onSearchTextChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 4: _t->onAddFriendClicked((*reinterpret_cast< const User(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         case 5: _t->onSearchResultClicked((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
+        case 6: _t->onSettingsClicked(); break;
         default: ;
         }
     }
@@ -134,13 +139,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }

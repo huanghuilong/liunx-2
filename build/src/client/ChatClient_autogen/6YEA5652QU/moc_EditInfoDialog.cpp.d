@@ -1,12 +1,9 @@
-/home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_MainWindow.cpp: /home/nikonikoni/桌面/chatserver2/src/client/include/MainWindow.h \
+/home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_EditInfoDialog.cpp: /home/nikonikoni/桌面/chatserver2/src/client/include/EditInfoDialog.h \
   /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/moc_predefs.h \
   /home/nikonikoni/桌面/chatserver2/include/public.hpp \
   /home/nikonikoni/桌面/chatserver2/include/server/model/group.hpp \
   /home/nikonikoni/桌面/chatserver2/include/server/model/groupuser.hpp \
   /home/nikonikoni/桌面/chatserver2/include/server/model/user.hpp \
-  /home/nikonikoni/桌面/chatserver2/src/client/include/AddFriendDialog.h \
-  /home/nikonikoni/桌面/chatserver2/src/client/include/EditInfoDialog.h \
-  /home/nikonikoni/桌面/chatserver2/src/client/include/PasswordVerifyDialog.h \
   /home/nikonikoni/桌面/chatserver2/src/client/include/public.h \
   /home/nikonikoni/桌面/chatserver2/thirdparty/json.hpp \
   /usr/include/arpa/inet.h \
@@ -387,7 +384,6 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/QWidgetList \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \

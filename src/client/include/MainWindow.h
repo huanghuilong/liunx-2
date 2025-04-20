@@ -14,6 +14,9 @@
 #include <QWidgetList>
 #include <map>
 #include <vector>
+#include "EditInfoDialog.h"
+#include "PasswordVerifyDialog.h"
+
 
 // 聊天消息结构
 struct ChatMessage {
@@ -47,12 +50,12 @@ private slots:
     void onGroupItemClicked(QListWidgetItem *item);
     // 槽函数 - 点击发送按钮
     void onSendButtonClicked();
-    // 测试
-    // void onContactItemClicked(QListWidgetItem *item); 
-    // 为收缩框设计的槽函数
+    // 为搜索框设计的槽函数
     void onSearchTextChanged(const QString &text);
     void onAddFriendClicked(const User &user, const QString &message);
     void onSearchResultClicked(QListWidgetItem *item);
+    // 添加设置按钮点击槽函数
+    void onSettingsClicked();
 
 private:
     // 初始化UI界面
@@ -69,6 +72,11 @@ private:
     // 显示消息
     void displayMessage(const ChatMessage &msg);
 
+
+    void showSettingsDialog();
+    void showAddFriendDialog(const User &user);
+    void showEditInfoDialog();
+
     // UI组件
     QSplitter *mainSplitter;    // 主分割器，用于分割左右面板
     QWidget *leftPanel;         // 左侧联系人面板
@@ -79,6 +87,7 @@ private:
     QTextEdit *chatDisplay;     // 聊天显示区域
     QLineEdit *messageInput;    // 消息输入框
     QPushButton *sendButton;    // 发送按钮
+    QPushButton *settingsButton;//设置按钮
     // 聊天框的按钮
     QLineEdit *searchInput;
     QListWidget *searchResults;

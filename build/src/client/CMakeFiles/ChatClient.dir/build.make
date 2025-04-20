@@ -83,10 +83,24 @@ src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/mocs_compilation.cpp -o CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
 
+src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o: src/client/CMakeFiles/ChatClient.dir/flags.make
+src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o: ../src/client/src/EditInfoDialog.cpp
+src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o: src/client/CMakeFiles/ChatClient.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o"
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o -MF CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o.d -o CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o -c /home/nikonikoni/桌面/chatserver2/src/client/src/EditInfoDialog.cpp
+
+src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.i"
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nikonikoni/桌面/chatserver2/src/client/src/EditInfoDialog.cpp > CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.i
+
+src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.s"
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nikonikoni/桌面/chatserver2/src/client/src/EditInfoDialog.cpp -o CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.s
+
 src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o: src/client/CMakeFiles/ChatClient.dir/flags.make
 src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o: ../src/client/src/MainWindow.cpp
 src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o: src/client/CMakeFiles/ChatClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o -MF CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o.d -o CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o -c /home/nikonikoni/桌面/chatserver2/src/client/src/MainWindow.cpp
 
 src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.i: cmake_force
@@ -97,10 +111,24 @@ src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatClient.dir/src/MainWindow.cpp.s"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nikonikoni/桌面/chatserver2/src/client/src/MainWindow.cpp -o CMakeFiles/ChatClient.dir/src/MainWindow.cpp.s
 
+src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o: src/client/CMakeFiles/ChatClient.dir/flags.make
+src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o: ../src/client/src/PasswordVerifyDialog.cpp
+src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o: src/client/CMakeFiles/ChatClient.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o"
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o -MF CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o.d -o CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o -c /home/nikonikoni/桌面/chatserver2/src/client/src/PasswordVerifyDialog.cpp
+
+src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.i"
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nikonikoni/桌面/chatserver2/src/client/src/PasswordVerifyDialog.cpp > CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.i
+
+src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.s"
+	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nikonikoni/桌面/chatserver2/src/client/src/PasswordVerifyDialog.cpp -o CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.s
+
 src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o: src/client/CMakeFiles/ChatClient.dir/flags.make
 src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o: ../src/client/src/loginwindow.cpp
 src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o: src/client/CMakeFiles/ChatClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o -MF CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o.d -o CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o -c /home/nikonikoni/桌面/chatserver2/src/client/src/loginwindow.cpp
 
 src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.i: cmake_force
@@ -114,7 +142,7 @@ src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.s: cmake_force
 src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o: src/client/CMakeFiles/ChatClient.dir/flags.make
 src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o: ../src/client/src/main.cpp
 src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o: src/client/CMakeFiles/ChatClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o -MF CMakeFiles/ChatClient.dir/src/main.cpp.o.d -o CMakeFiles/ChatClient.dir/src/main.cpp.o -c /home/nikonikoni/桌面/chatserver2/src/client/src/main.cpp
 
 src/client/CMakeFiles/ChatClient.dir/src/main.cpp.i: cmake_force
@@ -128,7 +156,7 @@ src/client/CMakeFiles/ChatClient.dir/src/main.cpp.s: cmake_force
 src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o: src/client/CMakeFiles/ChatClient.dir/flags.make
 src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o: ../src/client/src/public.cpp
 src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o: src/client/CMakeFiles/ChatClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o -MF CMakeFiles/ChatClient.dir/src/public.cpp.o.d -o CMakeFiles/ChatClient.dir/src/public.cpp.o -c /home/nikonikoni/桌面/chatserver2/src/client/src/public.cpp
 
 src/client/CMakeFiles/ChatClient.dir/src/public.cpp.i: cmake_force
@@ -142,7 +170,7 @@ src/client/CMakeFiles/ChatClient.dir/src/public.cpp.s: cmake_force
 src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o: src/client/CMakeFiles/ChatClient.dir/flags.make
 src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o: ../src/client/src/registerwindow.cpp
 src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o: src/client/CMakeFiles/ChatClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o -MF CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o.d -o CMakeFiles/ChatClient.dir/src/registerwindow.cpp.o -c /home/nikonikoni/桌面/chatserver2/src/client/src/registerwindow.cpp
 
 src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.i: cmake_force
@@ -156,7 +184,9 @@ src/client/CMakeFiles/ChatClient.dir/src/registerwindow.cpp.s: cmake_force
 # Object files for target ChatClient
 ChatClient_OBJECTS = \
 "CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o" \
 "CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o" \
+"CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o" \
 "CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o" \
 "CMakeFiles/ChatClient.dir/src/main.cpp.o" \
 "CMakeFiles/ChatClient.dir/src/public.cpp.o" \
@@ -166,7 +196,9 @@ ChatClient_OBJECTS = \
 ChatClient_EXTERNAL_OBJECTS =
 
 ../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o
+../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o
 ../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.o
+../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o
 ../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/src/loginwindow.cpp.o
 ../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o
 ../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/src/public.cpp.o
@@ -177,7 +209,7 @@ ChatClient_EXTERNAL_OBJECTS =
 ../bin/ChatClient: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 ../bin/ChatClient: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 ../bin/ChatClient: src/client/CMakeFiles/ChatClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../../../bin/ChatClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nikonikoni/桌面/chatserver2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../../../bin/ChatClient"
 	cd /home/nikonikoni/桌面/chatserver2/build/src/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChatClient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

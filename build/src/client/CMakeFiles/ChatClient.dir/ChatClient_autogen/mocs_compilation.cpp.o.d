@@ -440,9 +440,13 @@ src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.o: 
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_EditInfoDialog.cpp \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/EditInfoDialog.h \
  /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_MainWindow.cpp \
  /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/MainWindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QWidgetList \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/PasswordVerifyDialog.h \
+ /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_PasswordVerifyDialog.cpp \
  /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/moc_loginwindow.cpp \
  /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/6YEA5652QU/../../../../../src/client/include/loginwindow.h

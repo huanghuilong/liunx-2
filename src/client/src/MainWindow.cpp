@@ -10,6 +10,7 @@ MainWindow::MainWindow(const json &responsejs, int clientfd, QWidget *parent) : 
     setStyleSheet("background-color: #f1f3f5;");  // 更柔和的背景色
 }
 
+
 void MainWindow::setupUI() {
     mainSplitter = new QSplitter(Qt::Horizontal, this);
     mainSplitter->setHandleWidth(2);
@@ -79,6 +80,25 @@ void MainWindow::setupUI() {
     inputLayout->setContentsMargins(12, 8, 12, 8);
     inputLayout->setSpacing(8);
 
+    // 添加设置按钮
+    settingsButton = new QPushButton("⚙");  // 使用齿轮符号替代图标
+    settingsButton->setStyleSheet(
+        "QPushButton {"
+        "    background: transparent;"
+        "    border: none;"
+        "    padding: 4px;"
+        "    font-size: 16px;"
+        "    color: #495057;"
+        "}"
+        "QPushButton:hover {"
+        "    background-color: #e9ecef;"
+        "    border-radius: 4px;"
+        "    color: #212529;"
+        "}"
+    );
+    settingsButton->setToolTip("设置");
+    connect(settingsButton, &QPushButton::clicked, this, &MainWindow::showSettingsDialog);
+
     messageInput = new QLineEdit;
     messageInput->setPlaceholderText("✏️ 输入消息...");
     messageInput->setStyleSheet(
@@ -92,6 +112,7 @@ void MainWindow::setupUI() {
         "QPushButton:hover { background-color: #3b5bdb; }"
     );
 
+    inputLayout->addWidget(settingsButton);
     inputLayout->addWidget(messageInput);
     inputLayout->addWidget(sendButton);
 
@@ -507,6 +528,58 @@ void MainWindow::onAddFriendClicked(const User &user, const QString &message) {
 
 void MainWindow::clearChatArea() {
     chatDisplay->clear();
+}
+
+
+void MainWindow::showSettingsDialog() {
+    PasswordVerifyDialog *verifyDialog = new PasswordVerifyDialog(this);
+    connect(verifyDialog, &PasswordVerifyDialog::passwordVerified, this, [this](const QString &password) {
+        // 发送验证请求到服务器
+        // json verifyJs;
+        // verifyJs["msgid"] = VERIFY_PASSWORD_MSG;
+        // verifyJs["id"] = currentUser.getId();
+        // verifyJs["password"] = password.toStdString();
+        
+        // string buffer = verifyJs.dump();
+        // int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+        // if (len == -1) {
+        //     QMessageBox::warning(this, "错误", "验证请求发送失败");
+        //     return;
+        // }
+        
+        // 这里假设服务器会返回验证结果，实际应用中应该等待服务器响应
+        // 为了简化示例，我们直接显示编辑对话框
+        showEditInfoDialog();
+    });
+    
+    verifyDialog->exec();
+}
+
+void MainWindow::showEditInfoDialog() {
+    EditInfoDialog *editDialog = new EditInfoDialog(this);
+    connect(editDialog, &EditInfoDialog::infoChanged, this, [this](const QString &username, const QString &password) {
+        // 发送修改信息请求到服务器
+        json modifyJs;
+        modifyJs["msgid"] = MODIFY_USERINFO_MSG;
+        modifyJs["id"] = currentUser.getId();
+        modifyJs["newname"] = username.toStdString();
+        modifyJs["newpassword"] = password.toStdString();
+        
+        string buffer = modifyJs.dump();
+        int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+        if (len == -1) {
+            QMessageBox::warning(this, "错误", "修改请求发送失败");
+        } else {
+            // 更新本地用户信息
+        currentUser.setName(username.toStdString());
+        }
+    });
+    
+    editDialog->exec();
+}
+
+void MainWindow::onSettingsClicked() {
+    // 你的实现代码
 }
 
 #include "MainWindow.moc"

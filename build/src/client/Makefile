@@ -213,6 +213,30 @@ ChatClient_autogen/mocs_compilation.cpp.s:
 	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/ChatClient_autogen/mocs_compilation.cpp.s
 .PHONY : ChatClient_autogen/mocs_compilation.cpp.s
 
+src/EditInfoDialog.o: src/EditInfoDialog.cpp.o
+.PHONY : src/EditInfoDialog.o
+
+# target to build an object file
+src/EditInfoDialog.cpp.o:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o
+.PHONY : src/EditInfoDialog.cpp.o
+
+src/EditInfoDialog.i: src/EditInfoDialog.cpp.i
+.PHONY : src/EditInfoDialog.i
+
+# target to preprocess a source file
+src/EditInfoDialog.cpp.i:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.i
+.PHONY : src/EditInfoDialog.cpp.i
+
+src/EditInfoDialog.s: src/EditInfoDialog.cpp.s
+.PHONY : src/EditInfoDialog.s
+
+# target to generate assembly for a file
+src/EditInfoDialog.cpp.s:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.s
+.PHONY : src/EditInfoDialog.cpp.s
+
 src/MainWindow.o: src/MainWindow.cpp.o
 .PHONY : src/MainWindow.o
 
@@ -236,6 +260,30 @@ src/MainWindow.s: src/MainWindow.cpp.s
 src/MainWindow.cpp.s:
 	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/MainWindow.cpp.s
 .PHONY : src/MainWindow.cpp.s
+
+src/PasswordVerifyDialog.o: src/PasswordVerifyDialog.cpp.o
+.PHONY : src/PasswordVerifyDialog.o
+
+# target to build an object file
+src/PasswordVerifyDialog.cpp.o:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.o
+.PHONY : src/PasswordVerifyDialog.cpp.o
+
+src/PasswordVerifyDialog.i: src/PasswordVerifyDialog.cpp.i
+.PHONY : src/PasswordVerifyDialog.i
+
+# target to preprocess a source file
+src/PasswordVerifyDialog.cpp.i:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.i
+.PHONY : src/PasswordVerifyDialog.cpp.i
+
+src/PasswordVerifyDialog.s: src/PasswordVerifyDialog.cpp.s
+.PHONY : src/PasswordVerifyDialog.s
+
+# target to generate assembly for a file
+src/PasswordVerifyDialog.cpp.s:
+	cd /home/nikonikoni/桌面/chatserver2/build && $(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/ChatClient.dir/build.make src/client/CMakeFiles/ChatClient.dir/src/PasswordVerifyDialog.cpp.s
+.PHONY : src/PasswordVerifyDialog.cpp.s
 
 src/loginwindow.o: src/loginwindow.cpp.o
 .PHONY : src/loginwindow.o
@@ -350,9 +398,15 @@ help:
 	@echo "... ChatClient_autogen/mocs_compilation.o"
 	@echo "... ChatClient_autogen/mocs_compilation.i"
 	@echo "... ChatClient_autogen/mocs_compilation.s"
+	@echo "... src/EditInfoDialog.o"
+	@echo "... src/EditInfoDialog.i"
+	@echo "... src/EditInfoDialog.s"
 	@echo "... src/MainWindow.o"
 	@echo "... src/MainWindow.i"
 	@echo "... src/MainWindow.s"
+	@echo "... src/PasswordVerifyDialog.o"
+	@echo "... src/PasswordVerifyDialog.i"
+	@echo "... src/PasswordVerifyDialog.s"
 	@echo "... src/loginwindow.o"
 	@echo "... src/loginwindow.i"
 	@echo "... src/loginwindow.s"

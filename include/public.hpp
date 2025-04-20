@@ -17,6 +17,8 @@ enum EnMsgType
     CREATE_GROUP_MSG, // 创建群组
     ADD_GROUP_MSG, // 加入群组
     GROUP_CHAT_MSG, // 群聊天
+
+    MODIFY_USERINFO_MSG, // 修改用户信息
 };
 
 #endif

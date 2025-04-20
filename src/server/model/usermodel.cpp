@@ -76,6 +76,21 @@ bool UserModel::updateState(User user)
     return false;
 }
 
+void UserModel::updateUserInfo(User user)
+{
+    // 1.组装sql语句
+    char sql[1024] = {0};
+    sprintf(sql, "update user set name = '%s', password = '%s' where id = %d",
+            user.getName().c_str(), user.getPwd().c_str(), user.getId());
+
+    // MySQL mysql;
+    std::shared_ptr<MySQL> mysql = ConnectionPool::getConnectionPool()->getConnection();
+    if (mysql)
+    {
+        mysql->update(sql);
+    }
+}
+
 // 重置用户的状态信息
 void UserModel::resetState()
 {

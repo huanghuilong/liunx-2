@@ -18,6 +18,9 @@ public:
     // 重置用户的状态信息
     void resetState();
 
+    // 修改用户的信息
+    void updateUserInfo(User user);
+
     // 查询所有用户的信息
     std::vector<User> AllUserInfo();
 };

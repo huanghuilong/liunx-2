@@ -1,0 +1,77 @@
+[33mcommit d554317fb0c0672bc2e6887ba514422227528424[m[33m ([m[1;36mHEAD -> [m[1;32mhlh4545945[m[33m)[m
+Author: huang <huanghuilong3@gmail,com>
+Date:   Sun Apr 20 21:53:36 2025 +0800
+
+    新增了群组聊天离线消息的显示功能
+
+[33mcommit 3025a88571c907fb60eb933f853a5dea8da5780d[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Sun Apr 20 16:41:53 2025 +0800
+
+    添加了群组聊天的功能
+
+[33mcommit 5cf05143324d5d2b774eef3f750c524bdecd8892[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Thu Apr 17 00:10:57 2025 +0800
+
+    新增加了注册和登录时的错误提示
+
+[33mcommit f427a02528d12e2fbe028cf702ee1200748b2dc4[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Wed Apr 16 23:40:17 2025 +0800
+
+    将原来的代码的界面进行了修改
+
+[33mcommit 43f8a0b6f21e70fb6124ac08daffc44c1d7b1802[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Tue Apr 15 22:11:02 2025 +0800
+
+    增加了在客户端注册成功的时候弹出用户id的功能
+
+[33mcommit 3f8a853ac16a843e89b5229f4a048a74f4f9a53e[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Mon Apr 14 17:11:23 2025 +0800
+
+    将从服务端接收到的消息同步到了聊天框中
+
+[33mcommit 8fa3177976ac84fe23aa7e822a0530c613419ecf[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Sat Apr 12 23:23:28 2025 +0800
+
+    将数据库连接池运用到了代码之中
+
+[33mcommit fd772e9ed6e5688cea904fc472198778a1c70def[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Sat Apr 12 21:39:04 2025 +0800
+
+    再上面的基础上添加了一个数据库连接池并编译成功
+
+[33mcommit ee73835f17b0ae4a6201b6ba21fa3716a76f4fdc[m
+Author: huang <huanghuilong3@gmail.com>
+Date:   Sat Apr 12 03:22:33 2025 +0800
+
+    更新了注册，登录，查找用户，添加好友，发送消息的功能
+
+[33mcommit 80bf3ee7fa466f25842ae92803a031edb3478913[m[33m ([m[1;32mmaster[m[33m)[m
+Author: sl <sl@163.com>
+Date:   Thu Jul 29 22:38:54 2021 +0800
+
+    update chat code
+
+[33mcommit 1f9e434241255aaf3b15c15fb09fd8a7e647e7ab[m
+Author: 啊亮 <2491016871@qq.com>
+Date:   Sun Feb 23 18:42:32 2020 +0800
+
+    添加自动编译脚本
+
+[33mcommit 32cd5eb79ac38a5dd82847fc68ac644ad3711fea[m
+Author: 啊亮 <2491016871@qq.com>
+Date:   Sun Feb 23 18:32:16 2020 +0800
+
+    提交项目所有代码
+
+[33mcommit 4f8f402a0823b9fa218d538e6c84efd9b7a303b0[m
+Author: fixbug666 <52686902+fixbug666@users.noreply.github.com>
+Date:   Sun Feb 23 18:27:29 2020 +0800
+
+    Initial commit

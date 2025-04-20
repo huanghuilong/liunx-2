@@ -1,7 +1,7 @@
-src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o: \
- /home/nikonikoni/桌面/chatserver2/src/client/src/main.cpp \
+src/client/CMakeFiles/ChatClient.dir/src/EditInfoDialog.cpp.o: \
+ /home/nikonikoni/桌面/chatserver2/src/client/src/EditInfoDialog.cpp \
  /usr/include/stdc-predef.h \
- /home/nikonikoni/桌面/chatserver2/src/client/include/loginwindow.h \
+ /home/nikonikoni/桌面/chatserver2/src/client/include/EditInfoDialog.h \
  /home/nikonikoni/桌面/chatserver2/src/client/include/public.h \
  /home/nikonikoni/桌面/chatserver2/thirdparty/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
@@ -438,12 +438,4 @@ src/client/CMakeFiles/ChatClient.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
- /home/nikonikoni/桌面/chatserver2/src/client/include/registerwindow.h \
- /home/nikonikoni/桌面/chatserver2/src/client/include/MainWindow.h \
- /home/nikonikoni/桌面/chatserver2/src/client/include/AddFriendDialog.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QWidgetList \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
- /home/nikonikoni/桌面/chatserver2/src/client/include/EditInfoDialog.h \
- /home/nikonikoni/桌面/chatserver2/src/client/include/PasswordVerifyDialog.h \
- /home/nikonikoni/桌面/chatserver2/build/src/client/ChatClient_autogen/include/main.moc
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h

@@ -68,9 +68,21 @@
 			null
 		],
 		[
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/EditInfoDialog.h",
+			"MU",
+			"6YEA5652QU/moc_EditInfoDialog.cpp",
+			null
+		],
+		[
 			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/MainWindow.h",
 			"MU",
 			"6YEA5652QU/moc_MainWindow.cpp",
+			null
+		],
+		[
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/include/PasswordVerifyDialog.h",
+			"MU",
+			"6YEA5652QU/moc_PasswordVerifyDialog.cpp",
 			null
 		],
 		[
@@ -158,7 +170,17 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/EditInfoDialog.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/MainWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/nikonikoni/\u684c\u9762/chatserver2/src/client/src/PasswordVerifyDialog.cpp",
 			"MU",
 			null
 		],
