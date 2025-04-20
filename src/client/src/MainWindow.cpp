@@ -353,6 +353,30 @@ void MainWindow::onReceiveMessage(const QString &senderName, const QString &mess
     }
 }
 
+void MainWindow::onGroupMessageReceived(const QString &senderName, const QString &message, const QString &time, int senderId, bool isSelf) {
+    // 创建消息对象
+    ChatMessage msg;
+    msg.senderName = senderName;
+    msg.message = message;
+    msg.time = time;
+    msg.isSelf = isSelf;
+
+    // 获取发送者ID
+    if (isSelf) {
+        senderId = currentChatId;
+    }
+    
+    // 如果找到了发送者ID，保存消息
+    if (senderId != -1) {
+        chatHistory[senderId].push_back(msg);
+        
+        // 如果当前正在与发送者聊天，则显示消息
+        if (currentChatId == senderId) {
+            displayMessage(msg);
+        }
+    }
+}
+
 void MainWindow::onSendButtonClicked() {
     QString message = messageInput->text().trimmed();
     if (message.isEmpty() || currentChatId == -1) return;
@@ -364,15 +388,41 @@ void MainWindow::onSendButtonClicked() {
     onReceiveMessage(senderName, message, time, true);
     messageInput->clear();
 
-    // --------------------------chat业务的实现---------------------------------
     int friendid = currentChatId;
     string messages = message.toStdString();
+    
+    bool isGroup = true;
+    for (auto a: friends){
+        if (a.getId() == friendid){
+            isGroup = false;
+            break;
+        }
+    }
+    
+    if (!isGroup){
+    // --------------------------chat业务的实现---------------------------------
+        json js;
+        js["msgid"] = ONE_CHAT_MSG;
+        js["id"] = currentUser.getId();
+        js["name"] = currentUser.getName();
+        js["toid"] = friendid;
+        js["msg"] = messages;
+        js["time"] = getCurrentTime();
+        string buffer = js.dump();
 
+        int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+        if (-1 == len)
+        {
+            cerr << "send chat msg error -> " << buffer << endl;
+        }
+    // ------------------------------------------------------------------------
+    }else{
+    // --------------------------群聊业务的实现---------------------------------
     json js;
-    js["msgid"] = ONE_CHAT_MSG;
+    js["msgid"] = GROUP_CHAT_MSG;
     js["id"] = currentUser.getId();
     js["name"] = currentUser.getName();
-    js["toid"] = friendid;
+    js["groupid"] = friendid;
     js["msg"] = messages;
     js["time"] = getCurrentTime();
     string buffer = js.dump();
@@ -380,9 +430,14 @@ void MainWindow::onSendButtonClicked() {
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
     if (-1 == len)
     {
-        cerr << "send chat msg error -> " << buffer << endl;
+        cerr << "send groupchat msg error -> " << buffer << endl;
     }
+
     // ------------------------------------------------------------------------
+    }
+
+
+    
 }
 
 void MainWindow::onSearchTextChanged(const QString &text) {

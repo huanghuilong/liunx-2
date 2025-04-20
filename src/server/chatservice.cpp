@@ -265,9 +265,7 @@ void ChatService::clientCloseException(const TcpConnectionPtr &conn)
 // 一对一聊天业务
 void ChatService::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
-    std::cout << "我可以进入聊天的业务并且开始分配任务：" << std::endl;
     int toid = js["toid"].get<int>();
-
     {
         lock_guard<mutex> lock(_connMutex);
         auto it = _userConnMap.find(toid);
@@ -334,9 +332,11 @@ void ChatService::groupChat(const TcpConnectionPtr &conn, json &js, Timestamp ti
     lock_guard<mutex> lock(_connMutex);
     for (int id : useridVec)
     {
+        std::cout << "userid = " << id << std::endl;
         auto it = _userConnMap.find(id);
         if (it != _userConnMap.end())
         {
+            std::cout << "groupChat js = " << js << std::endl;
             // 转发群消息
             it->second->send(js.dump());
         }

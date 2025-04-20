@@ -38,6 +38,7 @@ public:
 
     // 接收消息的槽函数
     void onReceiveMessage(const QString &senderName, const QString &message, const QString &time, bool isSelf = false);
+    void onGroupMessageReceived(const QString &senderName, const QString &message, const QString &time,const int senderId, bool isSelf);
 
 private slots:
     // 槽函数 - 点击好友项
