@@ -418,20 +418,20 @@ void MainWindow::onSendButtonClicked() {
     // ------------------------------------------------------------------------
     }else{
     // --------------------------群聊业务的实现---------------------------------
-    json js;
-    js["msgid"] = GROUP_CHAT_MSG;
-    js["id"] = currentUser.getId();
-    js["name"] = currentUser.getName();
-    js["groupid"] = friendid;
-    js["msg"] = messages;
-    js["time"] = getCurrentTime();
-    string buffer = js.dump();
+        json js;
+        js["msgid"] = GROUP_CHAT_MSG;
+        js["id"] = currentUser.getId();
+        js["name"] = currentUser.getName();
+        js["groupid"] = friendid;
+        js["msg"] = messages;
+        js["time"] = getCurrentTime();
+        string buffer = js.dump();
 
-    int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
-    if (-1 == len)
-    {
-        cerr << "send groupchat msg error -> " << buffer << endl;
-    }
+        int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+        if (-1 == len)
+        {
+            cerr << "send groupchat msg error -> " << buffer << endl;
+        }
 
     // ------------------------------------------------------------------------
     }

@@ -50,3 +50,13 @@ Continuing.
 [New process 11022]
 
 
+
+
+
+
+
+
+
+
+
+insert into offlinemessage values(21, '{"id":13,"msg":"你好","msgid":6,"name":"zhang san","time":"2025-04-20 18:32:56","toid":21}')

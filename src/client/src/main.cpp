@@ -191,6 +191,23 @@ void doLoginResponse(json &responsejs, int clientfd)
                 }
                 else
                 {
+                    QMetaObject::invokeMethod(QApplication::instance(), [=](){
+                        // 获取所有顶层窗口
+                        QWidgetList topLevelWidgets = QApplication::topLevelWidgets();
+                        for (QWidget *widget : topLevelWidgets) {
+                            MainWindow *mainwindow = qobject_cast<MainWindow*>(widget);
+                            if (mainwindow) {
+                                mainwindow->onGroupMessageReceived(
+                                    QString::fromStdString(js["name"].get<std::string>()),
+                                    QString::fromStdString(js["msg"].get<string>()),
+                                    QString::fromStdString(js["time"].get<string>()),
+                                    js["groupid"].get<int>(), // 传递群组id
+                                    false
+                                );
+                                break;
+                            }
+                        }
+                    }, Qt::QueuedConnection);
                     cout << "群消息[" << js["groupid"] << "]:" << js["time"].get<string>() << " [" << js["id"] << "]" << js["name"].get<string>()
                             << " said: " << js["msg"].get<string>() << endl;
                 }
@@ -244,8 +261,6 @@ void readTaskHandler(int clientfd)
 
         if (GROUP_CHAT_MSG == msgtype)
         {
-            // cout << "群消息[" << js["groupid"] << "]:" << js["time"].get<string>() << " [" << js["id"] << "]" << js["name"].get<string>()
-            //      << " said: " << js["msg"].get<string>() << endl;
             
             // 发送群消息到主窗口
             QMetaObject::invokeMethod(QApplication::instance(), [=](){
